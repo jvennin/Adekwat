@@ -35,3 +35,137 @@
   border: 1px solid black;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
+
+.input-card h6 {
+  font-family:$body-font;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.value_output {
+  background: transparent;
+  border: transparent;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+input[type="range"].custom-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  //WEBKIT
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin-top: -5px;
+    box-shadow: 1px 1px 2px rgba(#000, 0.5);
+
+    cursor: pointer;
+
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 60%;
+    height: 9px;
+    background: #bdbdbd;
+    border-radius: 3rem;
+
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  &:hover::-webkit-slider-runnable-track {
+    background: $slider-hover;
+  }
+
+  // IE
+
+  &::-ms-track {
+    width: 60%;
+    cursor: pointer;
+    height: 9px;
+
+    transition: all 0.5s;
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  &::-ms-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin-top: -5px;
+    box-shadow: 1px 1px 2px rgba(#000, 0.5);
+
+    cursor: pointer;
+  }
+
+  &::-ms-fill-lower {
+    background: #bdbdbd;
+    border-radius: 3rem;
+  }
+  &:focus::-ms-fill-lower {
+    background: $slider-hover;
+  }
+  &::-ms-fill-upper {
+    background: #bdbdbd;
+    border-radius: 3rem;
+  }
+  &:focus::-ms-fill-upper {
+    background: $slider-hover;
+  }
+
+  //FIREFOX
+  &::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin-top: -5px;
+    box-shadow: 1px 1px 2px rgba(#000, 0.5);
+
+    cursor: pointer;
+  }
+
+  &::-moz-range-track {
+    width: 60%;
+    height: 9px;
+    background: #bdbdbd;
+    border-radius: 3rem;
+
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  &:hover::-moz-range-track {
+    background: $slider-hover;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
