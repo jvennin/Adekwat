@@ -14,21 +14,23 @@
             <h6>select capabilities</h6>
 
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
               <li class="nav-item">
-                <a class="nav-link active" id="pills-walking-duration-tab" data-toggle="pill" href="#pills-walking-duration" role="tab" aria-controls="pills-walking-duration" aria-selected="true">Durée de marche</a>
+                <a class="nav-link selector-large active" id="pills-walking-duration-tab" data-toggle="pill" href="#pills-walking-duration" role="tab" aria-controls="pills-walking-duration" aria-selected="true"><%= image_tag("pedestrian-man.png", :alt => "pedestrian-man") %></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link selector-large" id="pills-escalator-tab" data-toggle="pill" href="#pills-escalator" role="tab" aria-controls="pills-escalator" aria-selected="false"><%= image_tag("escalator.png", :alt => "escalator") %></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="pills-escalator-tab" data-toggle="pill" href="#pills-escalator" role="tab" aria-controls="pills-escalator" aria-selected="false">Escalateur</a>
+                <a class="nav-link selector-large" id="pills-stairs-tab" data-toggle="pill" href="#pills-stairs" role="tab" aria-controls="pills-stairs" aria-selected="false"><%= image_tag("stairs.png", :alt => "stairsOutput") %></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="pills-stairs-tab" data-toggle="pill" href="#pills-stairs" role="tab" aria-controls="pills-stairs" aria-selected="false">Escalier</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="pills-connection-tab" data-toggle="pill" href="#pills-connection" role="tab" aria-controls="pills-connection" aria-selected="false">Correspondances</a>
+                <a class="nav-link selector-large" id="pills-connection-tab" data-toggle="pill" href="#pills-connection" role="tab" aria-controls="pills-connection" aria-selected="false"><%= image_tag("network.png", :alt => "network") %></a>
               </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="pills-walking-duration" role="tabpanel" aria-labelledby="pills-walking-duration-tab">
+              <div class="tab-pane fade" id="pills-walking-duration" role="tabpanel" aria-labelledby="pills-walking-duration-tab">
                 <div class="input-card">
                   <h6>Temps de marche moyen?</h6>
                   <%#= f.input :walking_duration, as: :range, input_html: { min: 10, step: 5 } %>
