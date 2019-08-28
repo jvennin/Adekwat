@@ -1,7 +1,8 @@
 import "bootstrap";
 
 import { initAutocomplete } from "../plugins/init_autocomplete";
-import { slider } from "../components/slide";
+import { slider } from "../components/slider";
+import { escalator } from "../components/escalator";
 
 initAutocomplete();
 

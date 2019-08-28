@@ -32,11 +32,12 @@
 }
 
 .search_adekwat {
-  border: 1px solid black;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  border: 1px solid transparent;
+  box-shadow: 7px 5px 11px 0px rgba(0,0,0,0.53);
+  border-radius: 2px;
 }
 
-.input-card h6 {
+.search_adekwat h6 {
   font-family:$body-font;
   font-size: 20px;
   font-weight: 700;
@@ -44,6 +45,8 @@
 }
 
 .value_output {
+  font-family: $number-font;
+  font-size: 30px;
   background: transparent;
   border: transparent;
   width: 100%;
@@ -156,7 +159,23 @@ input[type="range"].custom-slider {
   }
 }
 
+// checkbox design
+.escalator-choices {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+.escalator-choice {
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  &.active {
+  border: 3px solid red;
+  }
+}
 
 
 

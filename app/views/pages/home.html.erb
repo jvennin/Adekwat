@@ -30,16 +30,18 @@
             <div class="tab-content" id="pills-tabContent">
               <div class="tab-pane fade show active" id="pills-walking-duration" role="tabpanel" aria-labelledby="pills-walking-duration-tab">
                 <div class="input-card">
-                  <h6>Temps de marche moyen?</h6>
+                  <h6>Temps de marche acceptable?</h6>
                   <%#= f.input :walking_duration, as: :range, input_html: { min: 10, step: 5 } %>
                   <input name="walkingDurationOutput" id="walkingDurationValueId" class="value_output" value="15"><br>
                   <input type="range" name="walkingDuration" id="walkingDurationId" class="custom-slider" value="15" min="10" max="20" step="5" oninput="this.form.walkingDurationOutput.value=this.value">
                 </div>
               </div>
               <div class="tab-pane fade" id="pills-escalator" role="tabpanel" aria-labelledby="pills-escalator-tab">
-                <div class="input-card">
+                <div class="input-card escalator-choices">
                   <h6>Besoin d'escaliers mécaniques?</h6>
-                  <%= f.input :escalator %>
+                  <%= f.input :escalator, as: :check_boxes %>
+                  <%= image_tag('checked.png', class: 'escalator-choice')%>
+                  <%= image_tag('cancel.png', class: 'escalator-choice')%>
                 </div>
               </div>
               <div class="tab-pane fade" id="pills-stairs" role="tabpanel" aria-labelledby="pills-stairs-tab">
