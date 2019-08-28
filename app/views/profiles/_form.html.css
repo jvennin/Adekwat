@@ -1,0 +1,89 @@
+.selector-form-item {
+  height: 100vh;
+  padding-top: 100px;
+  h2 {
+    color: white;
+    font-size: 44px;
+    text-align: center;
+  }
+}
+
+.first-div-margin {
+  margin-top: -120px;
+}
+
+.picto-item {
+  border-radius: 50% !important;
+  height: 80px;
+  border: 7px solid white;
+  width: 80px !important;
+}
+
+.all-btn {
+  width: 50vw !important;
+}
+
+.selector-margin {
+  margin-top: 120px;
+}
+
+.form-container input[type=radio] {
+  display:none;
+}
+
+
+.form-container input[type=radio]:checked+label {
+  background-color: $yellow;
+}
+
+.form-container input[type=radio]:checked+label.color-item {
+  border-color: $yellow;
+}
+
+.form-wrapper {
+  display: flex;
+  width: 100%;
+  padding: 3px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-container {
+  padding: 20px 10px;
+  align-item: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 1;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px !important;
+  display: flex;
+  flex-wrap: wrap;
+  .fas {
+    padding-top: 8px;
+  }
+  #target {
+    color: white;
+    font-size: 24px;
+    font-family: $body-font;
+    padding-top: 5px;
+  }
+  .price-range {
+    color: white;
+    font-size: 24px;
+    font-family: $body-font;
+    padding-top: 5px;
+  }
+}
+
+.highlight {
+  opacity: 1;
+}
+
+.all-btn {
+  width: 50vw !important;
+}
+
+.form-container h4 {
+  font-weight: bold;
+}

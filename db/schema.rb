@@ -66,6 +66,8 @@ ActiveRecord::Schema.define(version: 2019_08_28_140549) do
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "connection", default: 2
+    t.string "name"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 

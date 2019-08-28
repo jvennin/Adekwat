@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class=".col-12 .col-sm-12 .col-md-4 .col-lg-4 col-xl-4 offset-md-4 offset-lg-4 offset-xl-4">
+      <div class="form-itinerary card-product">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="D'où venez-vous ?">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Où aller-vous ?">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <% unless user_signed_in? %>
+            <%= simple_form_for :profile, url: itineraries_path do |f| %>
+              <%= f.input :walking_duration %>
+              <%= f.input :escalator %>
+              <%= f.input :stairs %>
+              <%= f.input :connection %>
+              <%= f.submit "Lancer ma recherche", class: "btn btn-primary" %>
+            <% end %>
+          <% end %>
+          <button type="submit" class="btn btn-primary btn-block btn-custom">Go</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
