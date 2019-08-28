@@ -9,6 +9,17 @@
 
     form{
       min-width:90%;
+      .form-group {
+        &:last-of-type {
+          .algolia-places {
+              display: none;
+            .ap-input-icon.ap-icon-pin{
+              display: none;
+            }
+          }
+        }
+
+      }
       input {
         min-height: 50px;
         border-radius: 5px;
