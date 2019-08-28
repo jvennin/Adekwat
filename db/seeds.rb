@@ -16,6 +16,7 @@ list = google_parse["routes"].first
 puts 'Cleaning database...'
 
 ItineraryPoi.destroy_all
+Location.destroy_all
 Itinerary.destroy_all
 Profile.destroy_all
 User.destroy_all
@@ -30,11 +31,17 @@ new_profile = Profile.new(user_id: new_user.id, lift: true, escalator: true, wal
 new_profile.save!
 
 puts 'Creating POI...'
-new_poi = Poi.new(lat: 48.8658461, lng: 2.3721732, address: "75011 Paris", station_name: "Parmentier", lift: false, escalator: false, stairs_number: 88 )
+new_poi = Poi.new(lat: 48.8658461, lng: 2.3721732, address: "75011 Paris", station_name: "Parmentier", lift: false, escalator: false, stairs_number: 88)
 new_poi.save!
 
+puts 'Creating Location...'
+new_origin = Location.new( address: "104 rue boileau 75016 Paris")
+new_destination = Location.new( address: "16 villa gaudelet 75011 Paris")
+new_origin.save!
+new_destination.save!
+
 puts 'Creating Itinerary...'
-new_itinerary = Itinerary.new(user_id: new_user.id, payload: list.to_json)
+new_itinerary = Itinerary.new(user_id: new_user.id, payload: list.to_json, origin_id: new_origin.id, destination_id: new_destination.id)
 new_itinerary.save!
 
 puts 'Creating Itinerary_poi...'

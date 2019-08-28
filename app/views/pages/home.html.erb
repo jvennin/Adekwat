@@ -4,7 +4,7 @@
       <div class="form-itinerary card-product">
         <%= simple_form_for :search, url: itineraries_path, method: :get do |f| %>  <!-- send to itineraries results page -->
           <div class="search_location">
-            <h6>start</h6> <!-- ce sont les titres pour chaque tab des étapes du formulaire -->
+            <p>Start</p> <!-- ce sont les titres pour chaque tab des étapes du formulaire -->
             <%= f.input :start_location, input_html: {id: "start"} %>
             <%= f.input :end_location, input_html: {id: "end"} %>
           </div>
