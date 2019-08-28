@@ -1,0 +1,82 @@
+<div class="form-wrapper">
+
+  <form action="" method="get" class='buy'>
+    <div class="selector-form-item first-div-margin">
+      <h2>Bonjour! Comment t'appelles-tu?</h2>
+      <div data-aos="fade-up" data-aos-duration="1000" class="form-container">
+        <input type="text" name="name" value="name">
+      </div>
+    </div>
+
+
+    <div class="selector-form-item first-div-margin">
+      <h2>Temps de marche moyen?</h2>
+        <div data-aos="fade-up" data-aos-duration="1000" class="form-container">
+          <div class="walking_duration"><h3 id='target' style=" font-size: 40px; font-weight: bold"></h3></div>
+          <br>
+          <%= range_field_tag('ranger_with_min_max', :min => 10, :max => 20, step: 1) %>
+          <br>
+        </div>
+        <input type="radio" name="walking_duration" value="all" id="walking_duration_all">
+          <label id="ans-one" for="walking_duration_all" class="all-btn bloup">
+            <h3>Peu importe</h3>
+          </label>
+          <a id="two"></a>
+    </div>
+
+    <div class="selector-form-item">
+      <div class="two"></div>
+      <h2 class="selector-margin">Besoin d'escaliers mécaniques?</h2>
+      <div data-aos="fade-up"
+       data-aos-duration="1000" class="form-container">
+        <input type="radio" name="escalator" value="true" id="escalator_yes">
+        <label id="ans-two" for="escalator_yes" class="picto-item">
+            <%= image_tag('checked.png') %>
+        </label>
+        <input type="radio" name="escalator" value="false" id="escalator_no">
+        <label id="ans-two" for="escalator_no" class="picto-item">
+            <%= image_tag('cancel.png') %>
+        </label>
+        <input type="radio" name="escalator" value="all" id="escalator_all">
+          <label id="ans-two" for="escalator_all" class="all-btn bloup">
+            <h3>Peu importe</h3>
+          </label>
+          <a id="two"></a>
+      </div>
+    </div>
+
+    <div class="selector-form-item">
+      <div class="three"></div>
+      <h2 class="selector-margin" >Nombre de marches d'escaliers?</h2>
+      <div data-aos="fade-up"
+       data-aos-duration="1000" class="form-container">
+        <div class="stairs"><h3 id='target' style=" font-size: 40px; font-weight: bold"></h3></div>
+        <br>
+        <%= range_field_tag 'stairs', nil,  min: 30, max: 80, step: 1 %>
+        <br>
+      </div>
+      <input type="radio" name="stairs" value="all" id="stairs_all">
+      <label id="ans-three" for="stairs_all" class="all-btn bloup">
+        <h3>Peu importe</h3>
+      </label>
+      <a id="two"></a>
+    </div>
+
+    <div class="selector-form-item">
+      <div class="four"></div>
+      <h2 class="selector-margin" >Nombre de correspondances maximum?</h2>
+      <div data-aos="fade-up"
+       data-aos-duration="1000" class="form-container">
+        <div class="connections"><h3 id='target' style=" font-size: 40px; font-weight: bold"></h3></div>
+        <br>
+        <%= range_field_tag 'connections', nil,  min: 0, max: 2, step: 1 %>
+        <br>
+      </div>
+      <input type="radio" name="connections" value="all" id="connections_all">
+      <label id="ans-four" for="connections_all" class="all-btn bloup">
+        <h3>Peu importe</h3>
+      </label>
+      <a id="two"></a>
+    </div>
+  </form>
+</div>
