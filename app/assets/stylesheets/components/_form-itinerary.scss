@@ -7,6 +7,10 @@
 
     form{
       min-width:90%;
+      input {
+        min-height: 50px;
+        border-radius: 5px;
+      }
     }
 
     label, small {
