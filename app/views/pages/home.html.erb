@@ -13,7 +13,7 @@
               <%= f.input :end_location, input_html: {id: "end"} %>
             </div>
             <div>
-              <button class="btn-results" id="ans-one">Choisis tes filtres</button>
+              <label class="btn-results" id="ans-one">Choisis tes filtres</label>
             </div>
           </div>
           <!-- Demande temps de marche -->
@@ -22,14 +22,14 @@
             <h2 class="search-margin">Temps de marche acceptable?</h2>
             <div class="form-container">
               <!-- new version -->
-              <input type="radio" name="10" value="true" id="10_true">
-              <label id="ans-two" for="10_true" class="btn-square-small">10</label>
+              <input type="radio" name="walking_duration" value="10" id="walking_duration_10">
+              <label id="ans-two" for="walking_duration_10" class="btn-square-small">10</label>
 
-              <input type="radio" name="15" value="false" id="15_false">
-              <label id="ans-two" for="15_false" class="btn-square-medium">15</label>
+              <input type="radio" name="walking_duration" value="15" id="walking_duration_15">
+              <label id="ans-two" for="walking_duration_false" class="btn-square-medium">15</label>
 
-              <input type="radio" name="20" value="false" id="20_false">
-              <label id="ans-two" for="20_false" class="btn-square-large">20</label>
+              <input type="radio" name="walking_duration" value="20" id="walking_duration_20">
+              <label id="ans-two" for="walking_duration_false" class="btn-square-large">20</label>
 
               <input type="radio" name="keep_all" value="all" id="keep_all">
               <label id="ans-two" for="keep_all" class="btn-whatever">Peu importe</label>
@@ -42,12 +42,12 @@
             <h2 class="search-margin" >Nombre de marches d'escaliers?</h2>
             <div class="form-container">
               <!-- new version -->
-              <input type="radio" name="30" value="true" id="30_true">
-              <label id="ans-three" for="30_true" class="btn-square-small">30</label>
-              <input type="radio" name="50" value="false" id="50_false">
-              <label id="ans-three" for="50_false" class="btn-square-medium">50</label>
-              <input type="radio" name="70" value="false" id="70_false">
-              <label id="ans-three" for="70_false" class="btn-square-large">70</label>
+              <input type="radio" name="stairs" value="30" id="stairs_30">
+              <label id="ans-three" for="stairs_30" class="btn-square-small">30</label>
+              <input type="radio" name="stairs" value="50" id="stairs_50">
+              <label id="ans-three" for="stairs_50" class="btn-square-medium">50</label>
+              <input type="radio" name="stairs" value="70" id="stairs_70">
+              <label id="ans-three" for="stairs_70" class="btn-square-large">70</label>
               <input type="radio" name="keep_all" value="all" id="keep_all">
               <label id="ans-three" for="keep_all" class="btn-whatever">Peu importe</label>
             </div>
@@ -58,11 +58,11 @@
             <h2 class="search-margin" >Nombre de correspondances?</h2>
             <div class="form-container">
               <!-- new version -->
-              <input type="radio" name="0" value="true" id="0_true">
+              <input type="radio" name="connection" value="0" id="connection_0">
               <label id="ans-four" for="0_true" class="btn-square-small">30</label>
-              <input type="radio" name="1" value="false" id="1_false">
+              <input type="radio" name="connection" value="1" id="connection_1">
               <label id="ans-four" for="1_false" class="btn-square-medium">50</label>
-              <input type="radio" name="2" value="false" id="2_false">
+              <input type="radio" name="connection" value="2" id="connection_2">
               <label id="ans-four" for="2_false" class="btn-square-large">70</label>
               <input type="radio" name="keep_all" value="all" id="keep_all">
               <label id="ans-four" for="keep_all" class="btn-whatever">Peu importe</label>
@@ -72,7 +72,6 @@
             <div class="five"></div>
             <h2 class="search-margin">Besoin d'escaliers mécaniques?</h2>
             <div class="form-container">
-              <%= f.input :escalator, as: :radio_buttons %>
               <!-- Demande escalators oui/non avec images -->
               <input type="radio" name="escalator" value="true" id="escalator_true">
               <label for="escalator_true" class="picto-item">

@@ -30,7 +30,7 @@ label img {
 
   h2 {
     color: black;
-    font-size: 44px;
+    font-size: 38px;
     text-align: center;
   }
 }
@@ -38,6 +38,11 @@ label img {
 .search-margin {
   margin-top: 120px;
 }
+
+.search-form-item input[type='radio'] {
+  display: none;
+}
+
 
 
 
