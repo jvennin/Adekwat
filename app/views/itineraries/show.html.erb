@@ -12,19 +12,21 @@
             <span class="number two">2</span>
           </div>
           <div class="time">
-            <p><span>51</span><span>min</span>
+            <% @possibilities.each do |i| %>
+              <p><span><%= i["legs"][0]["duration"]["text"] %></span>
+            <% end %>
           </div>
           <div class="waiting">
             <p>dans <span>0</span>, <span>5</span> min de parmentier</p>
           </div>
         </div>
       </div>
-      <%= @payload %>
-      <% @itineraries.each do |i| %>
+
+      <!-- <% @possibilities.each do |i| %>
         <h1 style="font-size:10px; color:red;">
-          <%= "#{i.origin.lat}, #{i.origin.lng}" %>
+          <%= "Itinéraire 1 #{i["legs"][0]["duration"]["text"]}" %>
         </h1>
-      <% end %>
+      <% end %> -->
     </div>
   </div>
 </div>
