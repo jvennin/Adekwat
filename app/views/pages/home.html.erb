@@ -14,19 +14,24 @@
             <h6>Choisis tes filtres</h6>
 
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-
+              <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded=" false" aria-controls="collapseExample"><%= image_tag("walking.png", :alt => "pedestrian-man") %>
+                </a>
+              </p>
+              <div class="collapse" id="collapseExample">
               <li class="nav-item">
-                <a class="nav-link selector-large active" id="pills-walking-duration-tab" data-toggle="pill" href="#pills-walking-duration" role="tab" aria-controls="pills-walking-duration" aria-selected="true"><%= image_tag("pedestrian-man.png", :alt => "pedestrian-man") %></a>
+                <a class="nav-link selector-large" id="pills-walking-duration-tab" data-toggle="pill" href="#pills-walking-duration" role="tab" aria-controls="pills-walking-duration" aria-selected="true"></a>
               </li>
+              </div>
 
               <li class="nav-item">
-                <a class="nav-link selector-large" id="pills-escalator-tab" data-toggle="pill" href="#pills-escalator" role="tab" aria-controls="pills-escalator" aria-selected="false"><%= image_tag("escalator.png", :alt => "escalator") %></a>
+                <a class="nav-link selector-large" id="pills-escalator-tab" data-toggle="pill" href="#pills-escalator" role="tab" aria-controls="pills-escalator" aria-selected="false"><%= image_tag("escalator2.png", :alt => "escalator") %></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link selector-large" id="pills-stairs-tab" data-toggle="pill" href="#pills-stairs" role="tab" aria-controls="pills-stairs" aria-selected="false"><%= image_tag("stairs.png", :alt => "stairsOutput") %></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link selector-large" id="pills-connection-tab" data-toggle="pill" href="#pills-connection" role="tab" aria-controls="pills-connection" aria-selected="false"><%= image_tag("network.png", :alt => "network") %></a>
+                <a class="nav-link selector-large" id="pills-connection-tab" data-toggle="pill" href="#pills-connection" role="tab" aria-controls="pills-connection" aria-selected="false"><%= image_tag("connection2.png", :alt => "network") %></a>
               </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
