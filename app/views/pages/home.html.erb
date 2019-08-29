@@ -15,17 +15,22 @@
           <!-- Demande temps de marche -->
           <div class="search-form-item">
             <div class="two"></div>
-            <h2 class="search-margin">Temps de marche acceptable?</h2>
+            <!-- selector image and legend -->
+            <div class="search-margin">
+              <%= image_tag('walking_duration.png') %>
+              <h2>MARCHE</h2>
+              <h3>Temps de marche acceptable?</h3>
+            </div>
             <div class="form-container">
               <!-- new version -->
               <input type="radio" name="walking_duration" value="10" id="walking_duration_10">
               <label id="ans-two" for="walking_duration_10" class="btn-square-small">10</label>
 
               <input type="radio" name="walking_duration" value="15" id="walking_duration_15">
-              <label id="ans-two" for="walking_duration_false" class="btn-square-medium">15</label>
+              <label id="ans-two" for="walking_duration_15" class="btn-square-medium">15</label>
 
               <input type="radio" name="walking_duration" value="20" id="walking_duration_20">
-              <label id="ans-two" for="walking_duration_false" class="btn-square-large">20</label>
+              <label id="ans-two" for="walking_duration_20" class="btn-square-large">20</label>
 
               <input type="radio" name="keep_all" value="all" id="keep_all">
               <label id="ans-two" for="keep_all" class="btn-whatever">Peu importe</label>
@@ -35,7 +40,12 @@
           <!-- Demande nombre de marches -->
           <div class="search-form-item">
             <div class="three"></div>
-            <h2 class="search-margin" >Nombre de marches d'escaliers?</h2>
+            <!-- selector image and legend -->
+            <div class="search-margin">
+              <%= image_tag('ladder.png') %>
+              <h2>ESCALIERS</h2>
+              <h3>Nombre de marches acceptable?</h3>
+            </div>
             <div class="form-container">
               <!-- new version -->
               <input type="radio" name="stairs" value="30" id="stairs_30">
@@ -51,22 +61,33 @@
           <!-- Demande nombre de correspondances -->
           <div class="search-form-item">
             <div class="four"></div>
-            <h2 class="search-margin" >Nombre de correspondances?</h2>
+            <!-- selector image and legend -->
+            <div class="search-margin">
+              <%= image_tag('connection.png') %>
+              <h2>CORRESPONDANCES</h2>
+              <h3>Nombre de correspondances?</h3>
+            </div>
             <div class="form-container">
               <!-- new version -->
               <input type="radio" name="connection" value="0" id="connection_0">
-              <label id="ans-four" for="0_true" class="btn-square-small">30</label>
+              <label id="ans-four" for="connection_0" class="btn-square-small">30</label>
               <input type="radio" name="connection" value="1" id="connection_1">
-              <label id="ans-four" for="1_false" class="btn-square-medium">50</label>
+              <label id="ans-four" for="connection_1" class="btn-square-medium">50</label>
               <input type="radio" name="connection" value="2" id="connection_2">
-              <label id="ans-four" for="2_false" class="btn-square-large">70</label>
+              <label id="ans-four" for="connection_2" class="btn-square-large">70</label>
               <input type="radio" name="keep_all" value="all" id="keep_all">
               <label id="ans-four" for="keep_all" class="btn-whatever">Peu importe</label>
             </div>
+          </div>
           <!-- Demande escalators oui/non -->
           <div class="search-form-item">
             <div class="five"></div>
-            <h2 class="search-margin">Besoin d'escaliers mécaniques?</h2>
+            <!-- selector image and legend -->
+            <div class="search-margin">
+              <%= image_tag('escalator_no_circle.png') %>
+              <h2>ESCALATORS</h2>
+              <h3>Besoin d'escaliers mécaniques?</h3>
+            </div>
             <div class="form-container">
               <!-- Demande escalators oui/non avec images -->
               <input type="radio" name="escalator" value="true" id="escalator_true">
