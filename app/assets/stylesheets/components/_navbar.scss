@@ -20,6 +20,11 @@
   }
 }
 @media (max-width: 992px) {
+
+  .navbar-light.navbar-toggler{
+    border:none!important;
+  }
+
   .navbar-collapse {
       position: absolute;
       top: 150px;
@@ -34,7 +39,8 @@
       background: #FE144C;
       z-index:10;
       .nav-link {
-        color: #FFF;
+        font-size:20px;
+        color: #FFF!important;
       }
   }
   .navbar-collapse.collapsing {
