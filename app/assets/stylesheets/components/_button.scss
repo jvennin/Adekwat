@@ -7,17 +7,15 @@
 .btn-whatever {
   color: black;
   padding: 8px 8px;
-  border-radius: 4px;
   background: white;
   transition: background 0.3s ease;
-  font-size: 25px;
+  font-size: 17px;
   font-family: inherit;
-  line-height: inherit;
+  line-height: 17px;
   justify-content: center;
-  display: center;
-  height: 65px;
-  width: 220px;
-
+  height: 36px;
+  width: 140px;
+  border: 2px solid black;
 }
 
 
@@ -27,16 +25,18 @@
   border-radius: 4px;
   background: white;
   transition: background 0.3s ease;
-  font-size: 25px;
+  font-size: 17px;
   font-family: inherit;
-  line-height: inherit;
+  line-height: 17px;
   justify-content: center;
-  display: center;
-  height: 65px;
-  width: 220px;
+  height: 36px;
+  width: 140px;
+  border: 2px solid black;
 }
 
+
 .btn-square-small {
+  align-items: center;
   justify-content: center;
   margin: calc(100vw * 0.05);
   display: flex;
@@ -52,6 +52,7 @@
 }
 
 .btn-square-medium {
+  align-items: center;
   justify-content: center;
   margin: calc(100vw * 0.05);
   display: flex;
@@ -67,6 +68,7 @@
 }
 
 .btn-square-large {
+  align-items: center;
   justify-content: center;
   margin: calc(100vw * 0.05);
   display: flex;

@@ -31,8 +31,9 @@ label img {
 
   h2 {
     color: black;
-    font-size: 38px;
+    font-size: 24px;
     text-align: center;
+    font-weight: lighter;
   }
 
   .search_location{
@@ -68,6 +69,13 @@ label img {
   display: none;
 }
 
+.container-form {
+  padding: 24px;
+}
 
+.marches {
+  display: flex;
+  align-items: flex-end;
+}
 
 
