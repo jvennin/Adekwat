@@ -23,18 +23,4 @@ class ItinerariesController < ApplicationController
     end
     #raise
   end
-
-  private
-
-  def search_api_google
-    # require 'json'
-    # require 'open-uri'
-
-    # url = "https://maps.googleapis.com/maps/api/directions/json?origin=#{itinerary.origin.lat, itinerary.origin.lng}&destination=#{itinerary.destination.lat, itinerat}&mode=transit&key=#{API_KEY_GOOGLE}"
-    # itinerary_results = open(url).read
-    # itinerary = JSON.parse(itinerary_results)
-    puts "ca marche !"
-    raise
-    #puts "#{itinerary['routes']}"
-  end
 end
