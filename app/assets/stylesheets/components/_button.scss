@@ -2,3 +2,75 @@
   min-height: 44px;
   font-size: 1.5em;
 }
+
+
+.btn-whatever {
+  color: black;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: white;
+  transition: background 0.3s ease;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  justify-content: center;
+  display: inline-block !important;
+}
+
+
+.btn-results {
+  color: black;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: white;
+  transition: background 0.3s ease;
+  font-size: inherit;
+  justify-content: center;
+}
+
+.btn-square-small {
+  width: 35%;
+  justify-content: center;
+  margin: calc(100vw * 0.05);
+  display: flex;
+  color: white;
+  font-family: "Baloo Bhai";
+  font-size: 24px;
+  background: #2166DD;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.25);
+  border-radius: 2px;
+  padding: 12px 20px;
+}
+
+.btn-square-medium {
+  width: 35%;
+  justify-content: center;
+  margin: calc(100vw * 0.05);
+  display: flex;
+  color: white;
+  font-family: "Baloo Bhai";
+  font-size: 24px;
+  background: #1DA8B0;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.25);
+  border-radius: 2px;
+  padding: 12px 20px;
+}
+
+.btn-square-large {
+  width: 35%;
+  justify-content: center;
+  margin: calc(100vw * 0.05);
+  display: flex;
+  color: white;
+  font-family: "Baloo Bhai";
+  font-size: 24px;
+  background: #811DB0;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.25);
+  border-radius: 2px;
+  padding: 12px 20px;
+}
+
+.btn-progress {
+
+}
+
