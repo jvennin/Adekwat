@@ -31,7 +31,13 @@ label img {
 
   h2 {
     color: black;
-    font-size: 38px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  h3 {
+    color: black;
+    font-size: 24px;
     text-align: center;
   }
 
@@ -61,13 +67,26 @@ label img {
 }
 
 .search-margin {
-  margin-top: 120px;
+  margin-top: 100px;
+  justify-content: center;
+  text-align: center;
 }
 
 .search-form-item input[type='radio'] {
   display: none;
 }
 
+
+.picto-item {
+  border-radius: 50% !important;
+}
+
+
+// selected options
+
+.form-container input[type=radio]:checked+label {
+  border: 5px solid $optional;
+}
 
 
 
