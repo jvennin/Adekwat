@@ -1,14 +1,10 @@
 <div class="container-fluid">
   <div class="row">
     <div class=".col-12 .col-sm-12 .col-md-4 .col-lg-4 col-xl-4 offset-md-4 offset-lg-4 offset-xl-4">
-
       <div class="form-wrapper">
-
-
-        <%= simple_form_for :search, url: itineraries_path, method: :get do |f| %>  <!-- send to itineraries results page -->
+        <%= simple_form_for :search, url: itineraries_path, method: :post do |f| %>  <!-- send to itineraries results page -->
           <div class="search-form-item">
             <div class="search_location">
-              <p>Start</p> <!-- ce sont les titres pour chaque tab des étapes du formulaire -->
               <%= f.input :start_location, input_html: {id: "start"} %>
               <%= f.input :end_location, input_html: {id: "end"} %>
             </div>

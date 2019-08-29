@@ -33,6 +33,30 @@ label img {
     font-size: 38px;
     text-align: center;
   }
+
+  .search_location{
+
+      .form-group {
+        &:last-of-type {
+          .algolia-places {
+              display: none;
+            .ap-input-icon.ap-icon-pin{
+              display: none;
+            }
+          }
+        }
+
+      }
+      input {
+        min-height: 50px;
+        border-radius: 5px;
+        padding-right: 40px;
+      }
+
+      label, small {
+        display: none;
+      }
+  }
 }
 
 .search-margin {
