@@ -1,0 +1,205 @@
+.form-itinerary.card-product{
+
+    padding-top:30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    height:100vh;
+    align-items: flex-start;
+
+    form{
+      min-width:90%;
+      .form-group {
+        &:last-of-type {
+          .algolia-places {
+              display: none;
+            .ap-input-icon.ap-icon-pin{
+              display: none;
+            }
+          }
+        }
+
+      }
+      input {
+        min-height: 50px;
+        border-radius: 5px;
+      }
+    }
+
+    label, small {
+      display: none;
+    }
+}
+
+.search_location {
+  background: white;
+  margin: 10px auto;
+  border-radius: 12px;
+  padding: (5px * 2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+
+
+.search_adekwat {
+  background: white;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: (24px * 2);
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.search_adekwat h6 {
+  font-family:$body-font;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.value_output {
+  font-family: $number-font;
+  font-size: 30px;
+  background: transparent;
+  border: transparent;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+input[type="range"].custom-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  //WEBKIT
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin-top: -5px;
+    box-shadow: 1px 1px 2px rgba(#000, 0.5);
+
+    cursor: pointer;
+
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 60%;
+    height: 9px;
+    background: #bdbdbd;
+    border-radius: 3rem;
+
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  &:hover::-webkit-slider-runnable-track {
+    background: $slider-hover;
+  }
+
+  // IE
+
+  &::-ms-track {
+    width: 60%;
+    cursor: pointer;
+    height: 9px;
+
+    transition: all 0.5s;
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  &::-ms-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin-top: -5px;
+    box-shadow: 1px 1px 2px rgba(#000, 0.5);
+
+    cursor: pointer;
+  }
+
+  &::-ms-fill-lower {
+    background: #bdbdbd;
+    border-radius: 3rem;
+  }
+  &:focus::-ms-fill-lower {
+    background: $slider-hover;
+  }
+  &::-ms-fill-upper {
+    background: #bdbdbd;
+    border-radius: 3rem;
+  }
+  &:focus::-ms-fill-upper {
+    background: $slider-hover;
+  }
+
+  //FIREFOX
+  &::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin-top: -5px;
+    box-shadow: 1px 1px 2px rgba(#000, 0.5);
+
+    cursor: pointer;
+  }
+
+  &::-moz-range-track {
+    width: 60%;
+    height: 9px;
+    background: #bdbdbd;
+    border-radius: 3rem;
+
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  &:hover::-moz-range-track {
+    background: $slider-hover;
+  }
+}
+
+// checkbox design
+.escalator-choices {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.escalator-choice {
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  &.active {
+  border: 3px solid red;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
