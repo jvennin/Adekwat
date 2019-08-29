@@ -1,0 +1,54 @@
+.results-itineraries-container {
+
+  background: $light-gray;
+
+  .itinerary-card {
+    position: relative;
+    display: flex;
+    //box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    height: 120px;
+    padding: 10px;
+    background: white;
+    border-top:1px solid #e0dede;
+    border-bottom:1px solid #e0dede;
+
+    .subway-line {
+      display: flex;
+      .number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:25px;
+        height:25px;
+        margin-right: 10px;
+        border-radius: 50%;
+        font-weight: bold;
+        &.one {
+          background-color: yellow;
+        }
+        &.two{
+          background-color: blue;
+          color: white;
+        }
+      }
+    }
+
+    .time {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .waiting {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      p{
+        margin: 0;
+      }
+    }
+
+  }
+
+}

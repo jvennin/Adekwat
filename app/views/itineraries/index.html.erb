@@ -1,16 +1,15 @@
 <div class="container-fluid">
   <div class="row">
-    <div class=".col-12 .col-sm-12 .col-md-4 .col-lg-4 col-xl-4 offset-md-4 offset-lg-4 offset-xl-4">
-      <h1>Itineraries#index</h1>
-      <p>Find me in app/views/itineraries/index.html.erb</p>
+    <div class=".col-12 .col-sm-12 .col-md-4 .col-lg-4 col-xl-4 offset-md-4 offset-lg-4 offset-xl-4 no-padding">
       <div class="map-box-container">
-        <p>here the map</p>
+        <div id="map" style="width: 100%; height: 300px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
-      <div class="results-itineraries-container">
-        <p>Suggérés</p>
+      <div class="results-itineraries-container mt-4">
+        <h1 class="title-sz-3">Suggestions</h1>
         <div class="itinerary-card">
           <div class="subway-line">
-            <p><span>1</span><span>2</span></p>
+            <span class="number one">1</span>
+            <span class="number two">2</span>
           </div>
           <div class="time">
             <p><span>51</span><span>min</span>
