@@ -8,5 +8,5 @@ const slider = () => {
   };
 };
 
-export { slider }
+export { slider };
 
