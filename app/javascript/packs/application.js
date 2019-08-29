@@ -1,11 +1,14 @@
 import "bootstrap";
+import {autoscroll} from "../components/autoscroll";
 
 import { initAutocomplete } from "../plugins/init_autocomplete";
-import { slider } from "../components/slider";
-import { escalator } from "../components/escalator";
 
 initAutocomplete();
 
-if (document.getElementById('walkingDurationID')) {
-  slider();
+
+
+
+
+if (document.getElementById('ans-one')) {
+  autoscroll();
 };

@@ -13,7 +13,7 @@
               <%= f.input :end_location, input_html: {id: "end"} %>
             </div>
             <div>
-              <button class="btn-results">Choisis tes filtres</button>
+              <button class="btn-results" id="ans-one">Choisis tes filtres</button>
             </div>
           </div>
           <!-- Demande temps de marche -->
@@ -43,13 +43,13 @@
             <div class="form-container">
               <!-- new version -->
               <input type="radio" name="30" value="true" id="30_true">
-              <label id="ans-four" for="30_true" class="btn-square-small">30</label>
+              <label id="ans-three" for="30_true" class="btn-square-small">30</label>
               <input type="radio" name="50" value="false" id="50_false">
-              <label id="ans-four" for="50_false" class="btn-square-medium">50</label>
+              <label id="ans-three" for="50_false" class="btn-square-medium">50</label>
               <input type="radio" name="70" value="false" id="70_false">
-              <label id="ans-four" for="70_false" class="btn-square-large">70</label>
+              <label id="ans-three" for="70_false" class="btn-square-large">70</label>
               <input type="radio" name="keep_all" value="all" id="keep_all">
-              <label id="ans-four" for="keep_all" class="btn-whatever">Peu importe</label>
+              <label id="ans-three" for="keep_all" class="btn-whatever">Peu importe</label>
             </div>
           </div>
           <!-- Demande nombre de correspondances -->
@@ -75,11 +75,11 @@
               <%= f.input :escalator, as: :radio_buttons %>
               <!-- Demande escalators oui/non avec images -->
               <input type="radio" name="escalator" value="true" id="escalator_true">
-              <label id="ans-two" for="escalator_true" class="picto-item">
+              <label for="escalator_true" class="picto-item">
                 <%= image_tag('checked.png') %>
               </label>
               <input type="radio" name="escalator" value="false" id="escalator_false">
-              <label id="ans-two" for="escalator_false" class="picto-item">
+              <label for="escalator_false" class="picto-item">
                 <%= image_tag('cancel.png') %>
               </label>
               <!-- Submit button -->
