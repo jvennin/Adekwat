@@ -1,30 +1,95 @@
 <div class="container-fluid">
   <div class="row">
     <div class=".col-12 .col-sm-12 .col-md-4 .col-lg-4 col-xl-4 offset-md-4 offset-lg-4 offset-xl-4">
-      <div class="form-itinerary card-product">
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="D'où venez-vous ?">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+      <div class="form-wrapper">
+
+
+        <%= simple_form_for :search, url: itineraries_path, method: :get do |f| %>  <!-- send to itineraries results page -->
+          <div class="search-form-item first-div-margin">
+            <div class="search_location">
+              <p>Start</p> <!-- ce sont les titres pour chaque tab des étapes du formulaire -->
+              <%= f.input :start_location, input_html: {id: "start"} %>
+              <%= f.input :end_location, input_html: {id: "end"} %>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Où aller-vous ?">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <!-- Demande temps de marche -->
+          <div class="search-form-item">
+            <div class="two"></div>
+            <h2 class="search-margin">Temps de marche acceptable?</h2>
+            <div class="form-container">
+              <!-- new version -->
+              <input type="radio" name="10" value="true" id="10_true">
+              <label id="ans-four" for="10_true">10</label>
+
+              <input type="radio" name="15" value="false" id="15_false">
+              <label id="ans-four" for="15_false">15</label>
+
+              <input type="radio" name="20" value="false" id="20_false">
+              <label id="ans-four" for="20_false">20</label>
+
+              <input type="radio" name="keep_all" value="all" id="keep_all">
+              <label id="ans-four" for="keep_all" class="btn-test">Peu importe</label>
+              <!-- simple form version -->
+              <%= f.input :walking_duration, as: :radio_buttons, collection: ['10', '15', '20', 'Peu importe'],
+              item_wrapper_class: 'btn-test' %>
+            </div>
           </div>
-          <% unless user_signed_in? %>
-            <%= simple_form_for :profile, url: itineraries_path do |f| %>
-              <%= f.input :walking_duration %>
-              <%= f.input :escalator %>
-              <%= f.input :stairs %>
-              <%= f.input :connection %>
-              <%= f.submit "Lancer ma recherche", class: "btn btn-primary" %>
-            <% end %>
-          <% end %>
-          <button type="submit" class="btn btn-primary btn-block btn-custom">Go</button>
-        </form>
+
+          <!-- Demande nombre de marches -->
+          <div class="search-form-item">
+            <div class="three"></div>
+            <h2 class="search-margin" >Nombre de marches d'escaliers?</h2>
+            <div class="form-container">
+              <!-- new version -->
+              <input type="radio" name="30" value="true" id="30_true">
+              <label id="ans-four" for="30_true">30</label>
+              <input type="radio" name="50" value="false" id="50_false">
+              <label id="ans-four" for="50_false">50</label>
+              <input type="radio" name="70" value="false" id="70_false">
+              <label id="ans-four" for="70_false">70</label>
+              <input type="radio" name="keep_all" value="all" id="keep_all">
+              <label id="ans-four" for="keep_all">Peu importe</label>
+              <!-- simple form version -->
+              <%= f.input :stairs, as: :radio_buttons, collection: ['30', '50', '70', 'Peu importe'] %>
+            </div>
+          </div>
+          <!-- Demande nombre de correspondances -->
+          <div class="search-form-item">
+            <div class="four"></div>
+            <h2 class="search-margin" >Nombre de correspondances?</h2>
+            <div class="form-container">
+              <!-- new version -->
+              <input type="radio" name="0" value="true" id="0_true">
+              <label id="ans-four" for="0_true">30</label>
+              <input type="radio" name="1" value="false" id="1_false">
+              <label id="ans-four" for="1_false">50</label>
+              <input type="radio" name="2" value="false" id="2_false">
+              <label id="ans-four" for="2_false">70</label>
+              <!-- simple form version -->
+              <%= f.input :connection, as: :radio_buttons, collection: [ 0, 1, 2 ] %>
+            </div>
+          <!-- Demande escalators oui/non -->
+          <div class="search-form-item">
+            <div class="five"></div>
+            <h2 class="search-margin">Besoin d'escaliers mécaniques?</h2>
+            <div class="form-container">
+              <%= f.input :escalator, as: :radio_buttons %>
+            </div>
+            <!-- Submit button -->
+            <div class="form-container">
+              <%= f.submit 'Partez!' %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
