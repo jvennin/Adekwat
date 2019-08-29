@@ -1,77 +1,91 @@
 <div class="container-fluid">
   <div class="row">
     <div class=".col-12 .col-sm-12 .col-md-4 .col-lg-4 col-xl-4 offset-md-4 offset-lg-4 offset-xl-4">
-      <div class="form-itinerary card-product">
+      <div class="form-wrapper">
         <%= simple_form_for :search, url: itineraries_path, method: :post do |f| %>  <!-- send to itineraries results page -->
-          <div class="search_location">
-            <p>Start</p> <!-- ce sont les titres pour chaque tab des étapes du formulaire -->
-            <%= f.input :start_location, input_html: {id: "start"} %>
-            <%= f.input :end_location, input_html: {id: "end"} %>
+          <div class="search-form-item">
+            <div class="search_location">
+              <%= f.input :start_location, input_html: {id: "start"} %>
+              <%= f.input :end_location, input_html: {id: "end"} %>
+            </div>
+            <div>
+              <button class="btn-results" id="ans-one">Choisis tes filtres</button>
+            </div>
+          </div>
+          <!-- Demande temps de marche -->
+          <div class="search-form-item">
+            <div class="two"></div>
+            <h2 class="search-margin">Temps de marche acceptable?</h2>
+            <div class="form-container">
+              <!-- new version -->
+              <input type="radio" name="10" value="true" id="10_true">
+              <label id="ans-two" for="10_true" class="btn-square-small">10</label>
+
+              <input type="radio" name="15" value="false" id="15_false">
+              <label id="ans-two" for="15_false" class="btn-square-medium">15</label>
+
+              <input type="radio" name="20" value="false" id="20_false">
+              <label id="ans-two" for="20_false" class="btn-square-large">20</label>
+
+              <input type="radio" name="keep_all" value="all" id="keep_all">
+              <label id="ans-two" for="keep_all" class="btn-whatever">Peu importe</label>
+            </div>
           </div>
 
-          <div class="search_adekwat">
-
-            <h6>Choisis tes filtres</h6>
-
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-
-              <li class="nav-item">
-                <a class="nav-link selector-large active" id="pills-walking-duration-tab" data-toggle="pill" href="#pills-walking-duration" role="tab" aria-controls="pills-walking-duration" aria-selected="true"><%= image_tag("pedestrian-man.png", :alt => "pedestrian-man") %></a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link selector-large" id="pills-escalator-tab" data-toggle="pill" href="#pills-escalator" role="tab" aria-controls="pills-escalator" aria-selected="false"><%= image_tag("escalator.png", :alt => "escalator") %></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link selector-large" id="pills-stairs-tab" data-toggle="pill" href="#pills-stairs" role="tab" aria-controls="pills-stairs" aria-selected="false"><%= image_tag("stairs.png", :alt => "stairsOutput") %></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link selector-large" id="pills-connection-tab" data-toggle="pill" href="#pills-connection" role="tab" aria-controls="pills-connection" aria-selected="false"><%= image_tag("network.png", :alt => "network") %></a>
-              </li>
-            </ul>
-            <div class="tab-content" id="pills-tabContent">
-              <div class="tab-pane fade" id="pills-walking-duration" role="tabpanel" aria-labelledby="pills-walking-duration-tab">
-                <div class="input-card">
-                  <h6>Temps de marche acceptable?</h6>
-                  <%#= f.input :walking_duration, as: :range, input_html: { min: 10, step: 5 } %>
-                  <input name="walkingDurationOutput" id="walkingDurationValueId" class="value_output" value="15"><br>
-                  <input type="range" name="walkingDuration" id="walkingDurationId" class="custom-slider" value="15" min="10" max="20" step="5" oninput="this.form.walkingDurationOutput.value=this.value">
-                </div>
-              </div>
-              <div class="tab-pane fade" id="pills-escalator" role="tabpanel" aria-labelledby="pills-escalator-tab">
-                <div class="input-card escalator-choices">
-                  <h6>Besoin d'escaliers mécaniques?</h6>
-                  <%= f.input :escalator, as: :check_boxes %>
-                  <%= image_tag('checked.png', class: 'escalator-choice')%>
-                  <%= image_tag('cancel.png', class: 'escalator-choice')%>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="pills-stairs" role="tabpanel" aria-labelledby="pills-stairs-tab">
-                <div class="input-card">
-                  <h6>Nombre de marches d'escaliers?</h6>
-                  <input name="stairsOutput" id="stairsId" class="value_output" value="50">
-                  <input type="range" name="stairs" id="stairsId" class="custom-slider" value="50" min="30" max="70" step="20" oninput="this.form.stairsOutput.value=this.value">
-                </div>
-              </div>
-              <div class="tab-pane fade" id="pills-connection" role="tabpanel" aria-labelledby="pills-connection-tab">
-                  <div class="input-card">
-                    <h6>Nombre de correspondances?</h6>
-                    <input name="connectionOutput" id="connectionId" class="value_output" value="1">
-                    <input type="range" name="connection" id="connectionId" class="custom-slider" value="1" min="0" max="2" step="1" oninput="this.form.connectionOutput.value=this.value">
-                  </div>
+          <!-- Demande nombre de marches -->
+          <div class="search-form-item">
+            <div class="three"></div>
+            <h2 class="search-margin" >Nombre de marches d'escaliers?</h2>
+            <div class="form-container">
+              <!-- new version -->
+              <input type="radio" name="30" value="true" id="30_true">
+              <label id="ans-three" for="30_true" class="btn-square-small">30</label>
+              <input type="radio" name="50" value="false" id="50_false">
+              <label id="ans-three" for="50_false" class="btn-square-medium">50</label>
+              <input type="radio" name="70" value="false" id="70_false">
+              <label id="ans-three" for="70_false" class="btn-square-large">70</label>
+              <input type="radio" name="keep_all" value="all" id="keep_all">
+              <label id="ans-three" for="keep_all" class="btn-whatever">Peu importe</label>
+            </div>
+          </div>
+          <!-- Demande nombre de correspondances -->
+          <div class="search-form-item">
+            <div class="four"></div>
+            <h2 class="search-margin" >Nombre de correspondances?</h2>
+            <div class="form-container">
+              <!-- new version -->
+              <input type="radio" name="0" value="true" id="0_true">
+              <label id="ans-four" for="0_true" class="btn-square-small">30</label>
+              <input type="radio" name="1" value="false" id="1_false">
+              <label id="ans-four" for="1_false" class="btn-square-medium">50</label>
+              <input type="radio" name="2" value="false" id="2_false">
+              <label id="ans-four" for="2_false" class="btn-square-large">70</label>
+              <input type="radio" name="keep_all" value="all" id="keep_all">
+              <label id="ans-four" for="keep_all" class="btn-whatever">Peu importe</label>
+            </div>
+          <!-- Demande escalators oui/non -->
+          <div class="search-form-item">
+            <div class="five"></div>
+            <h2 class="search-margin">Besoin d'escaliers mécaniques?</h2>
+            <div class="form-container">
+              <%= f.input :escalator, as: :radio_buttons %>
+              <!-- Demande escalators oui/non avec images -->
+              <input type="radio" name="escalator" value="true" id="escalator_true">
+              <label for="escalator_true" class="picto-item">
+                <%= image_tag('checked.png') %>
+              </label>
+              <input type="radio" name="escalator" value="false" id="escalator_false">
+              <label for="escalator_false" class="picto-item">
+                <%= image_tag('cancel.png') %>
+              </label>
+              <!-- Submit button -->
+              <div class="form-container">
+                <%= f.submit 'Partez!', class: 'btn-results' %>
               </div>
             </div>
           </div>
-          <%= f.submit 'Partez!', class: "btn-primary btn-block" %>
         <% end %>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
