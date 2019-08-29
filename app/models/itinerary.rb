@@ -11,12 +11,13 @@ class Itinerary < ApplicationRecord
   after_create :search_api_google
 
   def search_api_google
-    itinerary = Itinerary.last
-    end_location = itinerary.destination
-    start_location = itinerary.origin
+    end_location = self.destination
+    start_location = self.origin
     url = "https://maps.googleapis.com/maps/api/directions/json?origin=#{start_location.lat}, #{start_location.lng}&destination=#{end_location.lat}, #{end_location.lng}&mode=transit&key=#{ENV["API_KEY_GOOGLE"]}"
 
     itinerary_results = open(url).read
-    itinerary.payload = JSON.parse(itinerary_results)
+    #itinerary.payload = JSON.parse(itinerary_results)
+    self.payload = itinerary_results
+    self.save
   end
 end
