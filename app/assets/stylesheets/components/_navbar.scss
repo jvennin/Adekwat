@@ -22,16 +22,20 @@
 @media (max-width: 992px) {
   .navbar-collapse {
       position: absolute;
-      top: 54px;
+      top: 150px;
       right: 100%;
       padding-left: 15px;
       padding-right: 15px;
       padding-bottom: 15px;
       width: 100%;
+      height: 100vh;
       transition: all 0.3s ease;
       display: block;
       background: #FE144C;
       z-index:10;
+      .nav-link {
+        color: #FFF;
+      }
   }
   .navbar-collapse.collapsing {
       height: auto !important;
