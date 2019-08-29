@@ -31,12 +31,28 @@
     }
 }
 
-.search_adekwat {
-  border: 1px solid black;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+.search_location {
+  background: white;
+  margin: 10px auto;
+  border-radius: 12px;
+  padding: (5px * 2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.input-card h6 {
+
+
+.search_adekwat {
+  background: white;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: (24px * 2);
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.search_adekwat h6 {
   font-family:$body-font;
   font-size: 20px;
   font-weight: 700;
@@ -44,6 +60,8 @@
 }
 
 .value_output {
+  font-family: $number-font;
+  font-size: 30px;
   background: transparent;
   border: transparent;
   width: 100%;
@@ -156,7 +174,23 @@ input[type="range"].custom-slider {
   }
 }
 
+// checkbox design
+.escalator-choices {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+.escalator-choice {
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  &.active {
+  border: 3px solid red;
+  }
+}
 
 
 
