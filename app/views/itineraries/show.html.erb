@@ -8,27 +8,24 @@
         <h1 class="title-sz-3">Suggestions</h1>
         <div class="itinerary-card">
           <div class="subway-line">
-            <% @possibilities.each do |i| %>
-            <span class="number one" style="background-color:<%= i["legs"][0]["steps"][1]["transit_details"]["line"]["color"] %>; color:<%= i["legs"][0]["steps"][1]["transit_details"]["line"]["text-color"] %>;"><%= i["legs"][0]["steps"][1]["transit_details"]["line"]["short_name"] %></span>
-            <span class="number two" style="background-color:<%= i["legs"][0]["steps"][3]["transit_details"]["line"]["color"] %>; color:<%= i["legs"][0]["steps"][3]["transit_details"]["line"]["text-color"] %>;"><%= i["legs"][0]["steps"][3]["transit_details"]["line"]["short_name"] %></span>
+            <% @itinerary.legs.each do |leg| %>
+              <% leg.steps.each_with_index do |step, index| %>
+                <% if step.is_walking? %>
+                  <span class="number <%= index + 1 %>"><i class="fas fa-walking"></i></span>
+                <% else %>
+                  <span class="number <%= index + 1 %>" style="background-color:<%= step.line_color %>; color:<%= step.line_color_text %>;"><%= step.line_short_name %></span>
+                <% end %>
+              <% end %>
             <% end %>
           </div>
           <div class="time">
-            <% @possibilities.each do |i| %>
-              <p><span><%= i["legs"][0]["duration"]["text"] %></span>
-            <% end %>
+            <p><span><%= @itinerary.duration %> mins</span>
           </div>
           <div class="waiting">
             <p>dans <span>0</span>, <span>5</span> min de parmentier</p>
           </div>
         </div>
       </div>
-
-      <!-- <% @possibilities.each do |i| %>
-        <h1 style="font-size:10px; color:red;">
-          <%= "Itinéraire 1 #{i["legs"][0]["duration"]["text"]}" %>
-        </h1>
-      <% end %> -->
     </div>
   </div>
 </div>
