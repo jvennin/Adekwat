@@ -15,7 +15,7 @@
   width: 90%;
   margin: auto;
   margin-top: 20px !important;
-  display: flex;
+  // display: flex;
   flex-wrap: wrap;
 }
 
@@ -64,6 +64,7 @@ label img {
   margin-top: 100px;
   justify-content: center;
   text-align: center;
+  padding: 0 5px;
 }
 
 .search-form-item input[type='radio'] {
