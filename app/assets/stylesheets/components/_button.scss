@@ -5,19 +5,14 @@
 
 
 .btn-whatever {
-  color: black;
-  padding: 8px 8px;
-  border-radius: 4px;
-  background: white;
-  transition: background 0.3s ease;
-  font-size: 25px;
-  font-family: inherit;
-  line-height: inherit;
-  justify-content: center;
-  display: center;
-  height: 65px;
-  width: 220px;
 
+  width: 50vw !important;
+  background: $header;
+  border: 2px solid $header;
+  border-radius: 2px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 
