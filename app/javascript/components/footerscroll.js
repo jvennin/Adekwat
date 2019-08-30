@@ -36,7 +36,7 @@ const footerscroll = () => {
   fives.forEach((five) => {
     five.addEventListener('click', () => {
       console.log("clic on 5");
-      document.querySelector('##ans-top-five').scrollIntoView({ block: 'end', behavior: 'smooth' });
+      document.querySelector('#ans-top-five').scrollIntoView({ block: 'end', behavior: 'smooth' });
     })
   });
 
