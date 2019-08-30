@@ -1,0 +1,204 @@
+{"geocoded_waypoints":
+  [{"geocoder_status":"OK",
+    "place_id":"ChIJ_zvsEPBt5kcRSDs_lEhvb1w",
+    "types":["street_address"]},
+   {"geocoder_status":"OK",
+    "place_id":"ChIJd0ujpb165kcRkAr5lmK_118",
+    "types":["street_address"]}],
+ "routes":
+  [{"bounds":
+     {"northeast":{"lat":48.8745413, "lng":2.3801054},
+      "southwest":{"lat":48.8373406, "lng":2.255609}},
+    "copyrights":"Map data ©2019",
+    "fare":{"currency":"EUR", "text":"€1.90", "value":1.9},
+    "legs":
+     [{"arrival_time":
+        {"text":"11:37am", "time_zone":"Europe/Paris", "value":1567157872},
+       "departure_time":
+        {"text":"10:45am", "time_zone":"Europe/Paris", "value":1567154708},
+       "distance":{"text":"12.7 km", "value":12703},
+       "duration":{"text":"53 mins", "value":3164},
+       "end_address":"104 Rue Boileau, 75016 Paris, France",
+       "end_location":{"lat":48.8394843, "lng":2.2614138},
+       "start_address":"16 Villa Gaudelet, 75011 Paris, France",
+       "start_location":{"lat":48.8649278, "lng":2.3801054},
+       "steps":
+        [{"distance":{"text":"0.5 km", "value":528},
+          "duration":{"text":"7 mins", "value":399},
+          "end_location":{"lat":48.865262, "lng":2.374776},
+          "html_instructions":"Walk to Parmentier",
+          "polyline":
+           {"points":
+             "y|fiHuzoM}AnAOJKHMJGDoA~@MF\\`Cf@dDL|@BTBRXjBJr@RpABRJz@@LBH@F@BBBEf@KbACVOH@DZc@"},
+          "start_location":{"lat":48.8649278, "lng":2.3801054},
+          "steps":
+           [{"distance":{"text":"0.1 km", "value":145},
+             "duration":{"text":"2 mins", "value":99},
+             "end_location":{"lat":48.8661176, "lng":2.3791528},
+             "html_instructions":
+              "Head <b>northwest</b> on <b>Villa Gaudelet</b> toward <b>Rue Dranem</b>",
+             "polyline":{"points":"y|fiHuzoM}AnAOJKHMJGDoA~@MF"},
+             "start_location":{"lat":48.8649278, "lng":2.3801054},
+             "travel_mode":"WALKING"},
+            {"distance":{"text":"0.3 km", "value":301},
+             "duration":{"text":"4 mins", "value":227},
+             "end_location":{"lat":48.865218, "lng":2.3753426},
+             "html_instructions":"Turn <b>left</b> onto <b>Rue Oberkampf</b>",
+             "maneuver":"turn-left",
+             "polyline":
+              {"points":"gdgiHutoM\\`Cf@dDL|@BTBRXjBJr@RpABRJz@@LBH@F@BBB"},
+             "start_location":{"lat":48.8661176, "lng":2.3791528},
+             "travel_mode":"WALKING"},
+            {"distance":{"text":"46 m", "value":46},
+             "duration":{"text":"1 min", "value":31},
+             "end_location":{"lat":48.8653302, "lng":2.3746754},
+             "html_instructions":
+              "Turn <b>right</b> onto <b>Avenue de la République</b>",
+             "maneuver":"turn-right",
+             "polyline":{"points":"s~fiH{|nMEf@KbACV"},
+             "start_location":{"lat":48.865218, "lng":2.3753426},
+             "travel_mode":"WALKING"},
+            {"distance":{"text":"16 m", "value":16},
+             "duration":{"text":"1 min", "value":13},
+             "end_location":{"lat":48.8654067, "lng":2.3746346},
+             "html_instructions":
+              "Turn <b>right</b> onto <b>Rue Edouard Lockroy</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+             "maneuver":"turn-right",
+             "polyline":{"points":"i_giHwxnMOH"},
+             "start_location":{"lat":48.8653302, "lng":2.3746754},
+             "travel_mode":"WALKING"},
+            {"distance":{"text":"20 m", "value":20},
+             "duration":{"text":"1 min", "value":29},
+             "end_location":{"lat":48.865262, "lng":2.374776},
+             "html_instructions":
+              "Take entrance <span class=\"location\">1. Avenue de la République</span>",
+             "polyline":{"points":"w_giHgxnMZc@"},
+             "start_location":{"lat":48.865398, "lng":2.374597},
+             "travel_mode":"WALKING"}],
+          "travel_mode":"WALKING"},
+         {"distance":{"text":"3.7 km", "value":3733},
+          "duration":{"text":"11 mins", "value":660},
+          "end_location":{"lat":48.873465, "lng":2.328499},
+          "html_instructions":"Subway towards Pont de Levallois - Bécon",
+          "polyline":
+           {"points":
+             "{~fiHkynMA?YdC{CzXAJ{CpX]vDQ|C?@?HAlA?dB?B?Bp@lDVvAJj@p@tDzApK`BhLJnA@P?\\E\\QpAwBjOAD?@AB?BEVOhAYnBi@|Dg@zD]pCw@rGq@zFId@eBxMoB~NS`B_CdTe@tDALeAjJKbAc@nEQrA]h@GJEHCHW\\c@l@iA~AmDtHc@`AgCtF]x@cAqA"},
+          "start_location":{"lat":48.865262, "lng":2.374776},
+          "transit_details":
+           {"arrival_stop":
+             {"location":{"lat":48.873465, "lng":2.328499},
+              "name":"Havre - Caumartin"},
+            "arrival_time":
+             {"text":"11:08am", "time_zone":"Europe/Paris", "value":1567156082},
+            "departure_stop":
+             {"location":{"lat":48.865262, "lng":2.374776},
+              "name":"Parmentier"},
+            "departure_time":
+             {"text":"10:57am", "time_zone":"Europe/Paris", "value":1567155422},
+            "headsign":"Pont de Levallois - Bécon",
+            "headway":315,
+            "line":
+             {"agencies":[{"name":"STIF", "url":"http://www.vianavigo.com/"}],
+              "color":"#a19818",
+              "short_name":"3",
+              "text_color":"#ffffff",
+              "vehicle":
+               {"icon":"//maps.gstatic.com/mapfiles/transit/iw2/6/subway2.png",
+                "local_icon":
+                 "//maps.gstatic.com/mapfiles/transit/iw2/6/fr-paris-metro.png",
+                "name":"Subway",
+                "type":"SUBWAY"}},
+            "num_stops":9},
+          "travel_mode":"TRANSIT"},
+         {"distance":{"text":"36 m", "value":36},
+          "duration":{"text":"1 min", "value":37},
+          "end_location":{"lat":48.87342899999999, "lng":2.32899},
+          "html_instructions":"Walk to Havre - Caumartin",
+          "polyline":{"points":"crhiHcxeMDaB"},
+          "start_location":{"lat":48.873465, "lng":2.328499},
+          "steps":
+           [{"distance":{"text":"36 m", "value":36},
+             "duration":{"text":"1 min", "value":37},
+             "end_location":{"lat":48.87342899999999, "lng":2.32899},
+             "polyline":{"points":"crhiHcxeMDaB"},
+             "start_location":{"lat":48.873465, "lng":2.328499},
+             "travel_mode":"WALKING"}],
+          "travel_mode":"WALKING"},
+         {"distance":{"text":"7.9 km", "value":7909},
+          "duration":{"text":"20 mins", "value":1200},
+          "end_location":{"lat":48.83756899999999, "lng":2.255609},
+          "html_instructions":"Subway towards Pont de Sèvres",
+          "polyline":
+           {"points":
+             "}qhiHe{eMF@M`BSlCQlC{@bLG|@{AbSGpAEp@C`@?p@?`ABdAlAdM`A~JLlAHbAHbA~@`KLdAvArHDNJ\\Ld@DDT\\h@FxQS`Ad@HLd@v@rMrZzHtRDXBTBXDb@?\\A^IfBYdDT~KV|SLdAP`BfG|]XhBJvA?hC?~@{A`XcBvXGhB?FNvAnCvD~BbBfF`CtDdBrAMb@EtAO~BZb@FVDn@h@n@|@?@Z`@bDlG~BnEpDtGVVx@x@\\\\XXz@j@`HbDjChAfS`JdAbAR`@pBdHVl@JH~@v@fGvEpFdERPpGzEhCnBfCjB`DvBdBbAfB|@bDnAzEtApAp@~@dAJNDHHVx@`Dm@d@"},
+          "start_location":{"lat":48.87342899999999, "lng":2.32899},
+          "transit_details":
+           {"arrival_stop":
+             {"location":{"lat":48.83756899999999, "lng":2.255609},
+              "name":"Porte de Saint-Cloud"},
+            "arrival_time":
+             {"text":"11:32am", "time_zone":"Europe/Paris", "value":1567157568},
+            "departure_stop":
+             {"location":{"lat":48.87342899999999, "lng":2.32899},
+              "name":"Havre - Caumartin"},
+            "departure_time":
+             {"text":"11:12am", "time_zone":"Europe/Paris", "value":1567156368},
+            "headsign":"Pont de Sèvres",
+            "headway":256,
+            "line":
+             {"agencies":[{"name":"STIF", "url":"http://www.vianavigo.com/"}],
+              "color":"#d5c900",
+              "short_name":"9",
+              "text_color":"#000000",
+              "vehicle":
+               {"icon":"//maps.gstatic.com/mapfiles/transit/iw2/6/subway2.png",
+                "local_icon":
+                 "//maps.gstatic.com/mapfiles/transit/iw2/6/fr-paris-metro.png",
+                "name":"Subway",
+                "type":"SUBWAY"}},
+            "num_stops":15},
+          "travel_mode":"TRANSIT"},
+         {"distance":{"text":"0.5 km", "value":497},
+          "duration":{"text":"5 mins", "value":302},
+          "end_location":{"lat":48.8394843, "lng":2.2614138},
+          "html_instructions":"Walk to 104 Rue Boileau, 75016 Paris, France",
+          "polyline":
+           {"points":"yqaiHqpwL{B{LLIEQOq@Oq@o@uCeAaFS}@o@wCMFGDIAEAIG"},
+          "start_location":{"lat":48.83756899999999, "lng":2.255609},
+          "steps":
+           [{"distance":{"text":"0.2 km", "value":176},
+             "duration":{"text":"1 min", "value":67},
+             "end_location":{"lat":48.838193, "lng":2.257827},
+             "html_instructions":
+              "Take exit <span class=\"location\">5. Avenue de Versailles</span>",
+             "polyline":{"points":"yqaiHqpwL{B{L"},
+             "start_location":{"lat":48.83756899999999, "lng":2.255609},
+             "travel_mode":"WALKING"},
+            {"distance":{"text":"0.3 km", "value":291},
+             "duration":{"text":"4 mins", "value":213},
+             "end_location":{"lat":48.8392399, "lng":2.2614201},
+             "html_instructions":
+              "Head <b>northeast</b> on <b>Avenue de Versailles</b> toward <b>Rue Gudin</b>",
+             "polyline":{"points":"guaiHw~wLEQOq@Oq@o@uCeAaFS}@o@wC"},
+             "start_location":{"lat":48.8381179, "lng":2.2578788},
+             "travel_mode":"WALKING"},
+            {"distance":{"text":"30 m", "value":30},
+             "duration":{"text":"1 min", "value":22},
+             "end_location":{"lat":48.8394843, "lng":2.2614138},
+             "html_instructions":
+              "Turn <b>left</b> onto <b>Rue Boileau</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+             "maneuver":"turn-left",
+             "polyline":{"points":"g|aiH{txLMFGDIAEAIG"},
+             "start_location":{"lat":48.8392399, "lng":2.2614201},
+             "travel_mode":"WALKING"}],
+          "travel_mode":"WALKING"}],
+       "traffic_speed_entry":[],
+       "via_waypoint":[]}],
+    "overview_polyline":
+     {"points":
+       "y|fiHuzoMgCpBwAdAMF\\`Ct@bFFh@|@dGRzADFQjBCVOH@DZc@[dC}CfYyDh^Q~CA`EtAtHp@tDzApK`BhLJnA@n@WnB{BvOo@tEgD~W{@`HuEx]{Dj]gCrUe@t@IR{@jAiA~AmDtHkDvH]x@cAqADaBF@a@nFqDrf@MbCCrABfCnCdY`BvQLdAvArHPl@Rj@T\\h@FxQS`Ad@n@dArMrZzHtRHn@H|@A|@c@lGT~KV|S^fD`Hfa@JvA?hC?~@{A`XcBvXGhBN~AnCvD~BbB|KfFvBStAO~BZz@Ln@h@n@|@Zb@bH|MpDtGVVvAvAXXz@j@lLlFfS`JdAbAR`@pBdHVl@JHfInG`TbPfCjB`DvBlE`CbDnAzEtApAp@~@dAPXbAxDm@d@{B{LLIEQ_@cBuBwJcAuEULOCIG"},
+    "summary":"",
+    "warnings":
+     ["Walking directions are in beta. Use caution – This route may be missing sidewalks or pedestrian paths."],
+    "waypoint_order":[]}],
+ "status":"OK"}

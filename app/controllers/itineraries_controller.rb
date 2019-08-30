@@ -26,7 +26,7 @@ class ItinerariesController < ApplicationController
     #@itineraries = Itinerary.all
     authorize @itinerary
     @result = JSON.parse(@itinerary.payload)
-    @possibilities = @result["routes"]
+    #@possibilities = @result["routes"]
 
     #raise
 
