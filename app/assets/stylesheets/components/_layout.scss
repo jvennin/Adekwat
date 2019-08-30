@@ -1,6 +1,9 @@
 .container-fluid {
   padding-left: 0;
   padding-right: 0;
+  &.push-content {
+    padding-top: 150px;
+  }
 }
 
 .col-12 {

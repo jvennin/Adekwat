@@ -2,7 +2,6 @@
   display: flex;
   width: 100%;
   padding: 3px;
-  padding-top: 100px;
   justify-content: center;
   flex-direction: column;
 }
@@ -62,7 +61,9 @@ label img {
 }
 
 .search-margin {
-  margin-top: 120px;
+  margin-top: 100px;
+  justify-content: center;
+  text-align: center;
 }
 
 .search-form-item input[type='radio'] {
@@ -73,9 +74,23 @@ label img {
   padding: 24px;
 }
 
+
 .marches {
   display: flex;
   align-items: flex-end;
 }
+
+.picto-item {
+  border-radius: 50% !important;
+}
+
+
+// selected options
+
+.form-container input[type=radio]:checked+label {
+  border: 5px solid $optional;
+}
+
+
 
 
