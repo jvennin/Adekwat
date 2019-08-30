@@ -15,7 +15,7 @@
   width: 90%;
   margin: auto;
   margin-top: 20px !important;
-  display: flex;
+  // display: flex;
   flex-wrap: wrap;
 }
 
@@ -30,14 +30,9 @@ label img {
 
   h2 {
     color: black;
-    font-size: 30px;
-    text-align: center;
-  }
-
-  h3 {
-    color: black;
     font-size: 24px;
     text-align: center;
+    font-weight: lighter;
   }
 
   .search_location{
@@ -69,12 +64,22 @@ label img {
   margin-top: 100px;
   justify-content: center;
   text-align: center;
+  padding: 0 5px;
 }
 
 .search-form-item input[type='radio'] {
   display: none;
 }
 
+.container-form {
+  padding: 24px;
+}
+
+
+.marches {
+  display: flex;
+  align-items: flex-end;
+}
 
 .picto-item {
   border-radius: 50% !important;
@@ -86,6 +91,7 @@ label img {
 .form-container input[type=radio]:checked+label {
   border: 5px solid $optional;
 }
+
 
 
 
