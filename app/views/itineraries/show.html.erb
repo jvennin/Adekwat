@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid push-content">
   <div class="row">
     <div class=".col-12 .col-sm-12 .col-md-4 .col-lg-4 col-xl-4 offset-md-4 offset-lg-4 offset-xl-4 no-padding">
       <div class="map-box-container">
@@ -8,8 +8,10 @@
         <h1 class="title-sz-3">Suggestions</h1>
         <div class="itinerary-card">
           <div class="subway-line">
-            <span class="number one">1</span>
-            <span class="number two">2</span>
+            <% @possibilities.each do |i| %>
+            <span class="number one" style="background-color:<%= i["legs"][0]["steps"][1]["transit_details"]["line"]["color"] %>; color:<%= i["legs"][0]["steps"][1]["transit_details"]["line"]["text-color"] %>;"><%= i["legs"][0]["steps"][1]["transit_details"]["line"]["short_name"] %></span>
+            <span class="number two" style="background-color:<%= i["legs"][0]["steps"][3]["transit_details"]["line"]["color"] %>; color:<%= i["legs"][0]["steps"][3]["transit_details"]["line"]["text-color"] %>;"><%= i["legs"][0]["steps"][3]["transit_details"]["line"]["short_name"] %></span>
+            <% end %>
           </div>
           <div class="time">
             <% @possibilities.each do |i| %>

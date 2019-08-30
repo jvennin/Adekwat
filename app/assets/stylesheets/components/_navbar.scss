@@ -4,7 +4,9 @@
   height: 150px;
 
 }
-
+.navbar-toggler {
+  border: none!important;
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
