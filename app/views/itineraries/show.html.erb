@@ -5,36 +5,34 @@
         <div id="map" style="width: 100%; height: 300px;" data-markers="<%= @itinerary.markers.to_json %>" data-lines="<%= @itinerary.lines.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
       </div>
-      <div class="results-itineraries-container mt-4">
-        <h1 class="title-sz-3">Suggestions</h1>
-        <div class="itinerary-card">
-          <div class="subway-line">
-            <% @itinerary.legs.each do |leg| %>
-              <% leg.steps.each_with_index do |step, index| %>
-                <% if step.is_walking? %>
-                  <span class="number <%= index + 1 %>"><i class="fas fa-walking"></i></span>
-                <% else %>
-                  <span class="number <%= index + 1 %>" style="background-color:<%= step.line_color %>; color:<%= step.line_color_text %>;"><%= step.line_short_name %></span>
+      <h1 class="title-sz-3 mt-3">Meilleurs trajets</h1>
+      <% @itinerary.routes.each do |route| %>
+        <div class="results-itineraries-container mt-4">
+          <div class="itinerary-card">
+            <div class="subway-line">
+              <% route.legs.each do |leg| %>
+                <% leg.steps.each_with_index do |step, index| %>
+                  <% if step.is_walking? %>
+                    <span class="number <%= index + 1 %>"><i class="fas fa-walking"></i></span>
+                  <% else %>
+                    <span class="number <%= index + 1 %>" style="background-color:<%= step.line_color %>; color:<%= step.line_color_text %>;"><%= step.line_short_name %></span>
+                  <% end %>
                 <% end %>
               <% end %>
-            <% end %>
-          </div>
-          <div class="time">
-            <%if current_user.profiles.walking_duration == 10 %>
-              <p><span><%= @itinerary.duration * 1.3 %> mins</span>
-             <% elseif current_user.profiles.walking_duration == 15 %>
-              <p><span><%= @itinerary.duration * 1.5 %> mins</span>
-             % else %>
-              <p><span><%= @itinerary.duration * 1.7 %> mins</span>
-            % end %>
+
             </div>
-          <div class="waiting">
-            <p>dans <span>0</span>, <span>5</span> min de parmentier</p>
+            <div class="time">
+              <p><span><%= route.duration %> min</span>
+            </div>
+            <div class="waiting">
+                <p>dans <span><%= route.next_departure_time %></span> min de <%= route.next_departure_time_station %></p>
+            </div>
           </div>
           <div class="lift">
+          </div>
 
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
