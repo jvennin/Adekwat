@@ -2,6 +2,7 @@ import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
 const initMapbox = () => {
+
   const mapElement = document.getElementById('map');
 
   const fitMapToMarkers = (map, markers) => {
@@ -18,12 +19,37 @@ const initMapbox = () => {
     });
 
     const markers = JSON.parse(mapElement.dataset.markers);
+    const lines = JSON.parse(mapElement.dataset.lines);
     markers.forEach((marker) => {
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
         .addTo(map);
     });
-
+    map.on('load', function () {
+      map.addLayer({
+        "id": "route",
+        "type": "line",
+        "source": {
+          "type": "geojson",
+          "data": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+            "type": "LineString",
+            "coordinates": lines
+            }
+          }
+        },
+        "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+        },
+        "paint": {
+        "line-color": "#888",
+        "line-width": 8
+        }
+      });
+    });
     fitMapToMarkers(map, markers);
     //map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken, marker: true, }));
   };
@@ -50,7 +76,6 @@ const initMapbox = () => {
     });
 
   };
-
 };
 
 export { initMapbox };
