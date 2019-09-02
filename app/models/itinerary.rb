@@ -25,4 +25,49 @@ class Itinerary < ApplicationRecord
       Route.new(payload_route)
     end
   end
+
+  def duration
+    # sum = 0
+    # legs.each do |leg|
+    #   sum += leg.duration.to_i
+    # end
+    # sum
+
+    legs.inject(0) do |sum, leg|
+      sum + leg.duration.to_i
+    end
+  end
+
+  def markers
+    response = JSON.parse(payload)
+    results = []
+    response["routes"].first["legs"].first['steps'].each do |step|
+      # results << [step['start_location']['lat'], step['start_location']['lng']]
+      # results << [step['end_location']['lat'], step['end_location']['lng']]
+
+      start_location = {
+        lat: step['start_location']['lat'],
+        lng: step['start_location']['lng'],
+        # image_url: helpers.asset_url('https://t2.ftcdn.net/jpg/00/37/61/51/400_F_37615199_AYU8aTt35BvMUXmy9zpUMptTIjYvax1a.jpg')
+      }
+      results << start_location
+      end_location = {
+        lat: step['end_location']['lat'],
+        lng: step['end_location']['lng'],
+        # image_url: helpers.asset_url('https://t2.ftcdn.net/jpg/00/37/61/51/400_F_37615199_AYU8aTt35BvMUXmy9zpUMptTIjYvax1a.jpg')
+      }
+      results << end_location
+    end
+    results
+  end
+
+  def lines
+    response = JSON.parse(payload)
+    results = []
+    response["routes"].first["legs"].first['steps'].each do |step|
+      results << [step['start_location']['lng'], step['start_location']['lat']]
+      results << [step['end_location']['lng'], step['end_location']['lat']]
+    end
+    results
+  end
 end
