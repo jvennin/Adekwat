@@ -20,11 +20,19 @@
             <% end %>
           </div>
           <div class="time">
-            <p><span><%= @itinerary.duration %> mins</span>
-          </div>
+            <%if current_user.profiles.walking_duration == 10 %>
+              <p><span><%= @itinerary.duration * 1.3 %> mins</span>
+             <% elseif current_user.profiles.walking_duration == 15 %>
+              <p><span><%= @itinerary.duration * 1.5 %> mins</span>
+             % else %>
+              <p><span><%= @itinerary.duration * 1.7 %> mins</span>
+            % end %>
+            </div>
           <div class="waiting">
             <p>dans <span>0</span>, <span>5</span> min de parmentier</p>
           </div>
+          <div class="lift">
+
         </div>
       </div>
     </div>
