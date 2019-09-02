@@ -13,16 +13,16 @@ class Itinerary < ApplicationRecord
   def search_api_google
     end_location = self.destination
     start_location = self.origin
-    url = "https://maps.googleapis.com/maps/api/directions/json?origin=#{start_location.lat}, #{start_location.lng}&destination=#{end_location.lat}, #{end_location.lng}&mode=transit&key=#{ENV["API_KEY_GOOGLE"]}"
+    url = "https://maps.googleapis.com/maps/api/directions/json?origin=#{start_location.lat}, #{start_location.lng}&destination=#{end_location.lat}, #{end_location.lng}&mode=transit&&transit_mode=rail&alternatives=true&languages=fr&units=metric&region=fr&key=#{ENV["API_KEY_GOOGLE"]}"
     itinerary_results = open(url).read
     #itinerary.payload = JSON.parse(itinerary_results)
     self.payload = itinerary_results
     self.save
   end
 
-  def legs
-    JSON.parse(payload)["routes"].first["legs"].map do |payload_leg|
-      Leg.new(payload_leg)
+  def routes
+    JSON.parse(payload)["routes"].map do |payload_route|
+      Route.new(payload_route)
     end
   end
 
@@ -70,10 +70,4 @@ class Itinerary < ApplicationRecord
     end
     results
   end
-
-  # def steps
-  #   JSON.parse(payload)["routes"].first["legs"].first["steps"].map do |payload_step|
-  #     Step.new(payload_step)
-  #   end
-  # end
 end
