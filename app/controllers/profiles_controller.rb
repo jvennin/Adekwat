@@ -38,6 +38,6 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:escalator, :stairs, :walking_duration, :connection)
+    params.require(:profile).permit(:points, :status)
   end
 end
