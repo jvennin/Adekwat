@@ -13,7 +13,7 @@ class Itinerary < ApplicationRecord
   def search_api_google
     end_location = self.destination
     start_location = self.origin
-    url = "https://maps.googleapis.com/maps/api/directions/json?origin=#{start_location.lat}, #{start_location.lng}&destination=#{end_location.lat}, #{end_location.lng}&mode=transit&alternatives=true&languages=fr&key=#{ENV["API_KEY_GOOGLE"]}"
+    url = "https://maps.googleapis.com/maps/api/directions/json?origin=#{start_location.lat}, #{start_location.lng}&destination=#{end_location.lat}, #{end_location.lng}&mode=transit&alternatives=true&languages=fr&units=metric&key=#{ENV["API_KEY_GOOGLE"]}"
     itinerary_results = open(url).read
     #itinerary.payload = JSON.parse(itinerary_results)
     self.payload = itinerary_results
