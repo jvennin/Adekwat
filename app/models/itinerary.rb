@@ -20,27 +20,9 @@ class Itinerary < ApplicationRecord
     self.save
   end
 
-  def legs
-    JSON.parse(payload)["routes"].first["legs"].map do |payload_leg|
-      Leg.new(payload_leg)
+  def routes
+    JSON.parse(payload)["routes"].map do |payload_route|
+      Route.new(payload_route)
     end
   end
-
-  def duration
-    # sum = 0
-    # legs.each do |leg|
-    #   sum += leg.duration.to_i
-    # end
-    # sum
-
-    legs.inject(0) do |sum, leg|
-      sum + leg.duration.to_i
-    end
-  end
-
-  # def steps
-  #   JSON.parse(payload)["routes"].first["legs"].first["steps"].map do |payload_step|
-  #     Step.new(payload_step)
-  #   end
-  # end
 end

@@ -1,6 +1,5 @@
 class Step
-
-attr_reader :travel_mode, :options
+  attr_reader :travel_mode, :options
 
   def initialize(attributes = {})
     @travel_mode = attributes["travel_mode"]
@@ -9,6 +8,10 @@ attr_reader :travel_mode, :options
 
   def is_walking?
     @travel_mode == "WALKING"
+  end
+
+  def is_subway?
+    @travel_mode == "TRANSIT"
   end
 
   def line_color
@@ -27,5 +30,13 @@ attr_reader :travel_mode, :options
     if @travel_mode == "TRANSIT"
       @options["transit_details"]["line"]["short_name"]
     end
+  end
+
+  def next_departure_time
+    @options["transit_details"]["departure_time"]["text"] if @travel_mode == "TRANSIT"
+  end
+
+  def next_departure_time_station
+    @options["transit_details"]["departure_stop"]["name"] if @travel_mode == "TRANSIT"
   end
 end
