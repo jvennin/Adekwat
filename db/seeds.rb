@@ -26,6 +26,7 @@ Poi.destroy_all
 puts 'Creating User...'
 new_user = User.new(email: "camille@lewagon.com", password: "123456")
 new_user.save!
+
 puts 'Creating Profile...'
 new_profile = Profile.new(user_id: new_user.id, lift: true, escalator: true, walking_duration: 5, stairs: 0, score: 100, status: "Baby Hero")
 new_profile.save!

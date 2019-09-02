@@ -1,6 +1,5 @@
 class ProfilesController < ApplicationController
-  def selectors
-  end
+  before_action :set_profile, only: [:edit, :update, :create]
 
   def new
     @profile = Profile.new
@@ -23,6 +22,11 @@ class ProfilesController < ApplicationController
   def edit
   end
 
+  def show
+    @profile = Profile.find(params[:id])
+    authorize @profile
+  end
+
   def update
     respond_to do |format|
       if @profile.update(profile_params)
@@ -39,5 +43,9 @@ class ProfilesController < ApplicationController
 
   def profile_params
     params.require(:profile).permit(:points, :status)
+  end
+
+  def set_profile
+    @profile = Profile.find(params[:id])
   end
 end
