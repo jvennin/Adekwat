@@ -6,9 +6,9 @@
         </div>
       </div>
       <h1 class="title-sz-3 mt-3">Meilleurs trajets</h1>
-      <% @itinerary.routes.each do |route| %>
+      <% @itinerary.routes.each_with_index do |route, index| %>
         <div class="results-itineraries-container mt-4">
-          <div class="itinerary-card">
+          <div class="itinerary-card itinerary-border-<%= index %>">
             <div class="subway-line">
               <% route.legs.each do |leg| %>
                 <% leg.steps.each_with_index do |step, index| %>

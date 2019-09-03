@@ -49,7 +49,25 @@
         margin: 0;
       }
     }
-
   }
+}
 
+.itinerary-border-0 {
+  border-left-color: red !important;
+  border-left-width: 10px !important;
+}
+
+.itinerary-border-1 {
+  border-left-color: green !important;
+  border-left-width: 10px !important;
+}
+
+.itinerary-border-2 {
+  border-left-color: blue !important;
+  border-left-width: 10px !important;
+}
+
+.itinerary-border-3g {
+  border-left-color: orange !important;
+  border-left-width: 10px !important;
 }

@@ -4,11 +4,11 @@ class Profile < ApplicationRecord
   def coef_multiplicateur_duration
     case walking_duration
     when 10
-      return 1.3
+      return 1.4
     when 15
-      return 1.5
+      return 1.2
     else
-      return 1.7
+      return 1.1
     end
   end
 end
