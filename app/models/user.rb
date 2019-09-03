@@ -6,7 +6,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  #test
+  after_create :init_profile
 
+  def init_profile
+    Profile.create(user: self)
+  end
 
 end
