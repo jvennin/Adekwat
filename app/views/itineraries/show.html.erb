@@ -21,16 +21,30 @@
               <% end %>
 
             </div>
-            <div class="time">
-              <p><span><%= route.duration %> min</span>
-            </div>
-            <div class="waiting">
-                <p>dans <span><%= route.next_departure_time %></span> min de <%= route.next_departure_time_station %></p>
-            </div>
-          </div>
-          <div class="lift">
-          </div>
 
+
+            <div class="time">
+              <p><span><%= (route.duration * current_user.profile.coef_multiplicateur_duration).to_i%> mins</span>
+            </div>
+
+            <div class="waiting">
+              <p>dans <span><%= route.next_departure_time %></span> min de <%= route.departure_station %></p>
+            </div>
+
+          </div>
+         <div>
+           Station d'arrivee: <%= route.arrival_station %>
+         </div>
+
+          <% if route.arrival_poi(current_user) %>
+            <div>
+              À <%= route.arrival_station %>, prendre la sortie n#<%= route.arrival_poi(current_user).number %>
+            </div>
+          <% else %>
+            <div>
+              Pas d'information disponible pour cette station (ascenseur, escalator...)
+            </div>
+          <% end %>
         </div>
       <% end %>
     </div>

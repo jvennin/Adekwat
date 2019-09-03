@@ -16,11 +16,11 @@ list = google_parse["routes"].first
 puts 'Cleaning database...'
 
 ItineraryPoi.destroy_all
-Location.destroy_all
+Poi.destroy_all
 Itinerary.destroy_all
+Location.destroy_all
 Profile.destroy_all
 User.destroy_all
-Poi.destroy_all
 
 
 puts 'Creating User...'
@@ -31,8 +31,21 @@ new_profile = Profile.new(user_id: new_user.id, lift: true, escalator: true, wal
 new_profile.save!
 
 puts 'Creating POI...'
-new_poi = Poi.new(lat: 48.8658461, lng: 2.3721732, address: "75011 Paris", station_name: "Parmentier", lift: false, escalator: false, stairs_number: 88)
+new_poi = Poi.new(lat: 48.8658461, lng: 2.3721732, address: "75011 Paris", station_name: "Parmentier", number: 1, lift: false, escalator: false, stairs_number: 88)
 new_poi.save!
+
+new_poi = Poi.new(lat: 48.8658461, lng: 2.3721732, address: "75011 Paris", station_name: "Madeleine", number: 1, lift: true, escalator: true, stairs_number: 50)
+new_poi.save!
+
+new_poi = Poi.new(lat: 48.8658461, lng: 2.3721732, address: "75011 Paris", station_name: "Madeleine", number: 2, lift: false, escalator: true, stairs_number: 30)
+new_poi.save!
+
+new_poi = Poi.new(lat: 48.8658461, lng: 2.3721732, address: "75011 Paris", station_name: "Madeleine", number: 3, lift: true, escalator: false, stairs_number: 45)
+new_poi.save!
+
+new_poi = Poi.new(lat: 48.8658461, lng: 2.3721732, address: "75011 Paris", station_name: "Madeleine", number: 4, lift: false, escalator: false, stairs_number: 30)
+new_poi.save!
+
 
 puts 'Creating Location...'
 new_origin = Location.new( address: "104 rue boileau 75016 Paris")
