@@ -78,4 +78,8 @@ class Itinerary < ApplicationRecord
     end
     lines_results
   end
+
+  def colors
+    ['red', 'green', 'blue', 'orange']
+  end
 end

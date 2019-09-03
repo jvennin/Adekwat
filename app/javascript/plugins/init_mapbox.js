@@ -1,7 +1,7 @@
 import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
-const initMapbox = (clicked_markers, clicked_lines) => {
+const initMapbox = (clicked_markers, clicked_lines, clicked_color) => {
 
   const mapElement = document.getElementById('map');
 
@@ -35,6 +35,10 @@ const initMapbox = (clicked_markers, clicked_lines) => {
         .addTo(map);
     });
     map.on('load', function () {
+      let color = mapElement.dataset.color;
+      if (clicked_color) {
+        color = clicked_color;
+      }
       map.addLayer({
         "id": "route",
         "type": "line",
@@ -54,7 +58,7 @@ const initMapbox = (clicked_markers, clicked_lines) => {
         "line-cap": "round"
         },
         "paint": {
-        "line-color": "#888",
+        "line-color": color,
         "line-width": 8
         }
       });
