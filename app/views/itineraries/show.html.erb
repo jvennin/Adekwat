@@ -15,7 +15,7 @@
                   <% if step.is_walking? %>
                     <span class="number <%= index + 1 %>"><i class="fas fa-walking"></i></span>
                   <% else %>
-                    <span class="number <%= index + 1 %>" style="background-color:<%= step.line_color %>; color:<%= step.line_color_text %>;"><%= step.line_short_name %></span>
+                    <span class="number <%= step.is_rer %> <%= index + 1 %>" style="background-color:<%= step.line_color %>; color:<%= step.line_color_text %>;"><%= step.line_short_name %></span>
                   <% end %>
                 <% end %>
               <% end %>

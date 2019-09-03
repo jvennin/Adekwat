@@ -32,6 +32,14 @@ class Step
     end
   end
 
+  def is_rer
+    if @options["transit_details"]["line"]["short_name"].include?("RER")
+      return "rer"
+    elsif @options["transit_details"]["line"]["short_name"].include?("T")
+      return "tram"
+    end
+  end
+
   def next_departure_time
     @options["transit_details"]["departure_time"]["text"] if @travel_mode == "TRANSIT"
   end
