@@ -40,34 +40,42 @@ class Itinerary < ApplicationRecord
 
   def markers
     response = JSON.parse(payload)
-    results = []
-    response["routes"].first["legs"].first['steps'].each do |step|
-      # results << [step['start_location']['lat'], step['start_location']['lng']]
-      # results << [step['end_location']['lat'], step['end_location']['lng']]
+    routes = []
+    response["routes"].each do |route|
+      route_results = []
+        route["legs"].first['steps'].each do |step|
+        # results << [step['start_location']['lat'], step['start_location']['lng']]
+        # results << [step['end_location']['lat'], step['end_location']['lng']]
 
-      start_location = {
-        lat: step['start_location']['lat'],
-        lng: step['start_location']['lng'],
-        # image_url: helpers.asset_url('https://t2.ftcdn.net/jpg/00/37/61/51/400_F_37615199_AYU8aTt35BvMUXmy9zpUMptTIjYvax1a.jpg')
-      }
-      results << start_location
-      end_location = {
-        lat: step['end_location']['lat'],
-        lng: step['end_location']['lng'],
-        # image_url: helpers.asset_url('https://t2.ftcdn.net/jpg/00/37/61/51/400_F_37615199_AYU8aTt35BvMUXmy9zpUMptTIjYvax1a.jpg')
-      }
-      results << end_location
+        start_location = {
+          lat: step['start_location']['lat'],
+          lng: step['start_location']['lng'],
+          # image_url: helpers.asset_url('https://t2.ftcdn.net/jpg/00/37/61/51/400_F_37615199_AYU8aTt35BvMUXmy9zpUMptTIjYvax1a.jpg')
+        }
+        route_results << start_location
+        end_location = {
+          lat: step['end_location']['lat'],
+          lng: step['end_location']['lng'],
+          # image_url: helpers.asset_url('https://t2.ftcdn.net/jpg/00/37/61/51/400_F_37615199_AYU8aTt35BvMUXmy9zpUMptTIjYvax1a.jpg')
+        }
+        route_results << end_location
+      end
+      routes << route_results
     end
-    results
+    routes
   end
 
   def lines
     response = JSON.parse(payload)
-    results = []
-    response["routes"].first["legs"].first['steps'].each do |step|
-      results << [step['start_location']['lng'], step['start_location']['lat']]
-      results << [step['end_location']['lng'], step['end_location']['lat']]
+    lines_results = []
+    response["routes"].each do |route|
+      results = []
+      route["legs"].first['steps'].each do |step|
+        results << [step['start_location']['lng'], step['start_location']['lat']]
+        results << [step['end_location']['lng'], step['end_location']['lat']]
+      end
+      lines_results << results
     end
-    results
+    lines_results
   end
 end
