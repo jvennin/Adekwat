@@ -1,10 +1,9 @@
 // https://developer.mozilla.org/fr/docs/Web/API/Geolocation/getCurrentPosition
-
+import places from 'places.js';
 const geolocalizeMe = () => {
   let crd
+
   const button = document.querySelector('.ap-icon-pin');
-
-
 
   let options = {
     enableHighAccuracy: true,
@@ -13,12 +12,18 @@ const geolocalizeMe = () => {
   };
 
   const success = (pos) => {
-    crd = pos.coords;
+    let crd = pos.coords;
+    // console.log('Votre position actuelle est :');
+    // console.log(`Latitude : ${crd.latitude}`);
+    // console.log(`Longitude : ${crd.longitude}`);
+    // console.log(`La précision est de ${crd.accuracy} mètres.`);
 
-    console.log('Votre position actuelle est :');
-    console.log(`Latitude : ${crd.latitude}`);
-    console.log(`Longitude : ${crd.longitude}`);
-    console.log(`La précision est de ${crd.accuracy} mètres.`);
+  button.addEventListener('click', () => {
+    // console.log("Geoloc");
+    const input = document.querySelector('#start');
+    input.value = `${crd.latitude}, ${crd.longitude}`;
+  });
+
   }
 
   const error = (err) => {
@@ -26,13 +31,6 @@ const geolocalizeMe = () => {
   }
 
   navigator.geolocation.getCurrentPosition(success, error, options);
-
-  button.addEventListener('click', () => {
-    console.log("Geoloc");
-    const input = document.querySelector('#start');
-    input.value = `${crd.latitude}, ${crd.longitude}`;
-  })
-
 };
 
 export { geolocalizeMe };

@@ -9,12 +9,18 @@ import { footerscroll } from "../components/footerscroll";
 
 import { initAutocomplete } from "../plugins/init_autocomplete";
 import { initMapbox } from '../plugins/init_mapbox';
+<<<<<<< HEAD
 import { dynamicMap } from '../plugins/dynamic_map';
 // import { geolocalizeMe } from '../plugins/init_geoloc';
 
 initAutocomplete();
 initMapbox();
 dynamicMap(initMapbox);
+
+
+initAutocomplete();
+initMapbox();
+
 
 if (document.getElementById('ans-one')) {
   autoscroll();
