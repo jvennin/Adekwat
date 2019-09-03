@@ -36,7 +36,19 @@ class Step
     @options["transit_details"]["departure_time"]["text"] if @travel_mode == "TRANSIT"
   end
 
-  def next_departure_time_station
+  def departure_station
     @options["transit_details"]["departure_stop"]["name"] if @travel_mode == "TRANSIT"
+  end
+
+  def arrival_station
+    @options["transit_details"]["arrival_stop"]["name"] if @travel_mode == "TRANSIT"
+  end
+
+  def departure_poi
+    Poi.find_by(station_name: departure_station)
+  end
+
+  def arrival_poi
+    Poi.find_by(station_name: arrival_station)
   end
 end
