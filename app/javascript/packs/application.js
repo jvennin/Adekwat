@@ -9,12 +9,16 @@ import { footerscroll } from "../components/footerscroll";
 
 import { initAutocomplete } from "../plugins/init_autocomplete";
 import { initMapbox } from '../plugins/init_mapbox';
-import { geolocalizeMe } from '../plugins/init_geoloc';
+
+//import { geolocalizeMe } from '../plugins/init_geoloc';
 
 
 initAutocomplete();
 initMapbox();
-geolocalizeMe();
+
+// if (document.getElementById('start')) {
+//   geolocalizeMe();
+// };
 
 if (document.getElementById('ans-one')) {
   autoscroll();
