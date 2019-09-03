@@ -25,4 +25,21 @@ attr_reader :options
   def next_departure_time_station
     legs.first.next_departure_time_station
   end
+
+  def next_connection_time_station
+    legs.first.next_arrival_time_station
+  end
+
+  def departure_station
+    legs.first.subway_steps.first.departure_station
+  end
+
+  def arrival_station
+    legs.first.subway_steps.last.arrival_station
+  end
+
+  def arrival_poi(user)
+    BestPoiForStationAndProfile.call(arrival_station, user.profile)
+  end
+
 end

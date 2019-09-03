@@ -42,7 +42,7 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:points, :status)
+    params.require(:profile).permit(:score, :status, :walking_duration, :stairs, :connection, :escalator)
   end
 
   def set_profile

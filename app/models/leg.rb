@@ -28,4 +28,19 @@ class Leg
     end
     first_transit_station.next_departure_time_station
   end
+
+
+  def next_connection_time_station
+    #@options["transit_details"]["departure_stop"]["name"] if @travel_mode == "TRANSIT"
+    first_transit_station = steps.find do |step|
+      step.is_subway?
+    end
+    first_transit_station.next_arrival_time_station
+  end
+
+  def subway_steps
+    steps.select { |step| step.is_subway? }
+  end
+
+
 end
