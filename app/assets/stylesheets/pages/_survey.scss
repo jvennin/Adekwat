@@ -1,0 +1,50 @@
+.intro {
+  padding-top: 60px;
+}
+
+.intro img {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro h2 {
+  font-family: $titles-font;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  line-height: 2em;
+}
+
+.card-survey {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.survey-container {
+  padding: 10px 10px;
+  align-item: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 1;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px !important;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+
+.survey-container input[type='radio'] {
+  display: none;
+}
+
+.survey-margin {
+  margin-top: 50px;
+  justify-content: center;
+  text-align: center;
+  padding: 0 5px;
+}
