@@ -1,7 +1,7 @@
 import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
-const initMapbox = () => {
+const initMapbox = (clicked_markers, clicked_lines) => {
 
   const mapElement = document.getElementById('map');
 
@@ -18,8 +18,17 @@ const initMapbox = () => {
       style: 'mapbox://styles/mapbox/streets-v10'
     });
 
-    const markers = JSON.parse(mapElement.dataset.markers);
-    const lines = JSON.parse(mapElement.dataset.lines);
+    let markers = JSON.parse(mapElement.dataset.markers);
+    let lines = JSON.parse(mapElement.dataset.lines);
+
+    if (clicked_markers) {
+      markers = JSON.parse(clicked_markers);
+    }
+
+    if (clicked_lines) {
+      lines = JSON.parse(clicked_lines);
+    }
+
     markers.forEach((marker) => {
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])

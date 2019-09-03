@@ -14,7 +14,18 @@ import { geolocalizeMe } from '../plugins/init_geoloc';
 
 initAutocomplete();
 initMapbox();
-geolocalizeMe();
+
+const routes = document.querySelectorAll('.results-itineraries-container');
+routes.forEach((route) => {
+  route.addEventListener('click', (event) => {
+    const markers = event.currentTarget.dataset.markers
+    const lines = event.currentTarget.dataset.lines
+    initMapbox(markers, lines);
+    console.log(event.currentTarget.dataset.markers);
+    console.log(event.currentTarget.dataset.lines);
+  });
+});
+
 
 if (document.getElementById('ans-one')) {
   autoscroll();
