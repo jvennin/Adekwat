@@ -1,26 +1,22 @@
 <div class="container dashboard mt-5">
   <div class="row">
     <div class="col-md-12">
-      <h1 class="mb-5">Bonjour Camoumou !</h1>
+      <h1 class="profile">Bonjour Camoumou !</h1>
         <hr>
-
-
-          <div class="card-product mb-3">
-            <div class="card-product-details">
-              <div class="card-product-infos">
-                <h2><%= @profile.score %></h2>
-              </div>
-            </div>
+          <div class="profile-img">
+          <%= image_tag "walking.png" , class: "card-img-top" %>
           </div>
-
-
+        </div>
+          <h2><%= @profile.score %></h2>
     </div>
   </div>
 </div>
+<div class="buttons">
+<label class="btn-results" id="ans-one">Modifier mon profil</label>
+<label class="btn-results" id="ans-one">Quitter</label>
+</div>
 
-  <%#= link_to "Modifier mon profil"  %>
-  <%#= link_to "Quitter", home_path %>
-  <br>
+
 
 
 
