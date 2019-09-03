@@ -11,4 +11,5 @@ class User < ApplicationRecord
   def init_profile
     Profile.create(user: self)
   end
+
 end
