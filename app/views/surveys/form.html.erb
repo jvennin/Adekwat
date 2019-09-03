@@ -1,0 +1,53 @@
+<div class="container-fluid push-content">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-4 offset-lg-4 offset-xl-4">
+      <div class="card-survey">
+        <div class="intro">
+          <h2>Aidez-nous à vous aider!</h2>
+          <%= image_tag('heart_plant.png')%>
+        </div>
+        <div class="survey-wrapper">
+          <%= simple_form_for :answer, url: poi_survey_answer_path(@poi), method: :post do |f| %> <!-- send to profile page -->
+              <!-- question station-->
+              <div class="survey-margin">
+                <h3>Avez-vous pris la sortie #<%#= route.arrival_poi(current_user).number %> à la station <%#= route.arrival_station %>?</h3>
+              </div>
+              <div class="survey-container">
+                <!-- radio buttons -->
+                <input type="radio" name="poi" value="true" id="poi_true">
+                <label for="poi_true" class="picto-item">
+                  <%= image_tag('checked.png') %>
+                </label>
+                <input type="radio" name="poi" value="false" id="poi_false">
+                <label for="poi_false" class="picto-item">
+                  <%= image_tag('cancel.png') %>
+                </label>
+              </div>
+            </div>
+              <!-- question escalator -->
+              <div class="survey-margin">
+                <h3>L'escalator était-il fonctionnel?</h3>
+              </div>
+              <div class="survey-container">
+                <!-- radio buttons -->
+                <input type="radio" name="escalator" value="true" id="escalator_true">
+                <label for="escalator_true" class="picto-item">
+                  <%= image_tag('checked.png') %>
+                </label>
+                <input type="radio" name="escalator" value="false" id="escalator_false">
+                <label for="escalator_false" class="picto-item">
+                  <%= image_tag('cancel.png') %>
+                </label>
+                <!-- Submit button -->
+                <div class="survey-container">
+                  <%= f.submit 'Merci!', class: 'btn-results' %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  resources :pois, only: [] do
+    post "survey_answer", to: "surveys#answer", as: :survey_answer
+    get "survey_form", to: "surveys#form", as: :survey_form
+  end
   resources :itineraries, only: [:create, :show]
   resources :profiles, only: [:index, :new, :show, :edit]
 
