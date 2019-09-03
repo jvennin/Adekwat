@@ -12,7 +12,7 @@
                 <%= f.input :start_location, input_html: {id: "start", placeholder: "Position actuelle"} %>
                 <%= f.input :end_location, input_html: {id: "end", placeholder: "Ou allez-vous?"} %>
               </div>
-              <label class="btn-results" id="ans-one">Choisis tes filtres</label>
+              <label class="btn-results btn-block" id="ans-one">Choisis tes filtres</label>
             </div>
           <div>
 
@@ -31,7 +31,6 @@
               <div class="marches">
                 <input type="radio" name="walking_duration" value="10" id="walking_duration_10">
                 <label id="ans-two" for="walking_duration_10" class="btn-square-small">10</label>
-
 
                 <input type="radio" name="walking_duration" value="15" id="walking_duration_15">
                 <label id="ans-two" for="walking_duration_15" class="btn-square-medium">15</label>
@@ -112,7 +111,7 @@
               </label>
               <!-- Submit button -->
               <div class="form-container">
-                <%= f.submit 'Partez!', class: 'btn-results' %>
+                <%= f.submit 'Partez!', class: 'btn-results btn-block' %>
               </div>
             </div>
           </div>

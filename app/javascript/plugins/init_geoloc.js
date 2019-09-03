@@ -4,11 +4,7 @@ const geolocalizeMe = () => {
   let crd
   const button = document.querySelector('.ap-icon-pin');
 
-  button.addEventListener('click', () => {
-    console.log("Geoloc");
-    const input = document.querySelector('#start');
-    input.value = `${crd.latitude}, ${crd.longitude}`;
-  })
+
 
   let options = {
     enableHighAccuracy: true,
@@ -30,6 +26,12 @@ const geolocalizeMe = () => {
   }
 
   navigator.geolocation.getCurrentPosition(success, error, options);
+
+  button.addEventListener('click', () => {
+    console.log("Geoloc");
+    const input = document.querySelector('#start');
+    input.value = `${crd.latitude}, ${crd.longitude}`;
+  })
 
 };
 

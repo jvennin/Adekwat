@@ -5,10 +5,18 @@
 
 }
 .navbar-toggler {
-  border: none!important;
+  border: none;
+  color: #FFFFFF;
+  &:focus {
+    outline: none;
+  }
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+
+  .nav-link {
+    color: #FFF;
+  }
 }
 
 .navbar-lewagon {
@@ -23,8 +31,13 @@
 }
 @media (max-width: 992px) {
 
-  .navbar-light.navbar-toggler{
-    border:none!important;
+  .navbar-light {
+    .navbar-toggler{
+      border:none!important;
+      .fa-bars {
+        color: #FFFFFF!important;
+      }
+    }
   }
 
   .navbar-collapse {
@@ -46,10 +59,10 @@
       }
   }
   .navbar-collapse.collapsing {
+      display: block;
       height: auto !important;
       margin-right: 50%;
       transition: all 0.3s ease;
-      display: block;
   }
   .navbar-collapse.show {
       right: 0;

@@ -21,13 +21,14 @@
 
 .btn-results {
   color: black;
+  min-height: 44px;
   padding: 8px 8px;
   border-radius: 4px;
   background: white;
   transition: background 0.3s ease;
   font-size: 17px;
   font-family: inherit;
-  line-height: 17px;
+  //line-height: 17px;
   justify-content: center;
 
   border: 2px solid black;
