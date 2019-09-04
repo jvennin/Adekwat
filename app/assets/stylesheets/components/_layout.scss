@@ -6,33 +6,38 @@
     //overflow: scroll;
     margin-bottom: 100px;
   }
-
+  .content-wrapper {
+    width: 90%;
+  }
   .screen-one, .scree-two, .screen-three, .screen-four, .screen-five  {
     height: 100vh;
-    .content-wrapper {
-      width: 90%;
-    }
+
   }
 
 
   .screen-one {
     // background-color: blue;
+    //border: 1px dashed blue;
   }
 
   .screen-two {
     // background-color: white;
+    //border: 1px dashed white;
   }
 
   .screen-three {
     // background-color: red;
+    //border: 1px dashed red;
   }
 
   .screen-four {
     // background-color: black;
+    //border: 1px dashed black;
   }
 
   .screen-five {
     // background-color: yellow;
+    //border: 1px dashed yellow;
   }
 
 }
