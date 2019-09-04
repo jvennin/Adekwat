@@ -1,117 +1,124 @@
-
-<div class="container-fluid push-content" id="ans-top-one">
-
-
+<div class="container-fluid push-content" id="itineraire">
   <div class="row">
-    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-4 offset-lg-4 offset-xl-4">
+    <!-- col-lg-4 col-xl-4 offset-lg-4 offset-xl-4 -->
+    <div class="col-12 col-sm-12 col-md-4 offset-md-4 ">
       <div class="form-wrapper">
         <%= simple_form_for :search, url: itineraries_path, method: :post do |f| %>  <!-- send to itineraries results page -->
-          <div class="search-form-item">
-            <div class="form-container">
-              <div class="search_location">
+          <div class="search-form-item form-container one screen-one">
+            <div class="content-wrapper">
+              <div class="search-location">
                 <%= f.input :start_location, input_html: {id: "start", placeholder: "Position actuelle"} %>
                 <%= f.input :end_location, input_html: {id: "end", placeholder: "Ou allez-vous?"} %>
               </div>
               <label class="btn-results btn-block" id="ans-one">Choisis tes filtres</label>
             </div>
-          <div>
-
-
-
-          <!-- Demande temps de marche -->
-          <div class="search-form-item two" id="ans-top-two">
+          </div>
+          <div class="search-form-item two screen-two" id="marche">
             <!-- selector image and legend -->
-            <div class="search-margin">
-              <%= image_tag('walking_duration.png') %>
-              <h2>MARCHE</h2>
-              <h3>Temps de marche acceptable?</h3>
-            </div>
-            <div class="form-container">
-              <!-- new version -->
-              <div class="marches">
-                <input type="radio" name="walking_duration" value="10" id="walking_duration_10">
-                <label id="ans-two" for="walking_duration_10" class="btn-square-small">10</label>
-
-                <input type="radio" name="walking_duration" value="15" id="walking_duration_15">
-                <label id="ans-two" for="walking_duration_15" class="btn-square-medium">15</label>
-
-                <input type="radio" name="walking_duration" value="20" id="walking_duration_20">
-                <label id="ans-two" for="walking_duration_20" class="btn-square-large">20</label>
+            <div class="content-wrapper">
+              <div class="search-margin">
+                <%= image_tag('walking_duration.png') %>
+                <h2>MARCHE</h2>
+                <h3>Temps de marche acceptable?</h3>
               </div>
-                <input type="radio" name="walking_duration" value="30" id="walking_duration_all">
-                <label id="ans-two" for="walking_duration_all" class="btn-whatever">Peu importe</label>
+              <div class="form-container">
+                <!-- new version -->
+                <div class="marches">
+                  <input type="radio" name="walking_duration" value="10" id="walking_duration_10">
+                  <label id="ans-two" for="walking_duration_10" class="btn-square-small">10</label>
+
+                  <input type="radio" name="walking_duration" value="15" id="walking_duration_15">
+                  <label id="ans-two" for="walking_duration_15" class="btn-square-medium">15</label>
+
+                  <input type="radio" name="walking_duration" value="20" id="walking_duration_20">
+                  <label id="ans-two" for="walking_duration_20" class="btn-square-large">20</label>
+                </div>
+                <div class="btn-div">
+                  <input type="radio" name="walking_duration" value="30" id="walking_duration_all">
+                  <label id="ans-two" for="walking_duration_all" class="btn-whatever">Peu importe</label>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Demande nombre de marches -->
-
-          <div class="search-form-item three" id="ans-top-three">
+          <div class="search-form-item three screen-three" id="escaliers">
             <!-- selector image and legend -->
-            <div class="search-margin">
-              <%= image_tag('ladder.png') %>
-              <h2>ESCALIERS</h2>
-              <h3>Nombre de marches acceptable ?</h3>
-            </div>
-            <div class="form-container">
-              <!-- new version -->
-              <div class="marches">
-                <input type="radio" name="stairs" value="30" id="stairs_30">
-                <label id="ans-three" for="stairs_30" class="btn-square-small">30</label>
-                <input type="radio" name="stairs" value="50" id="stairs_50">
-                <label id="ans-three" for="stairs_50" class="btn-square-medium">50</label>
-                <input type="radio" name="stairs" value="70" id="stairs_70">
-                <label id="ans-three" for="stairs_70" class="btn-square-large">70</label>
+            <div class="content-wrapper">
+              <div class="search-margin">
+                <%= image_tag('ladder.png') %>
+                <h2>ESCALIERS</h2>
+                <h3>Nombre de marches acceptable ?</h3>
               </div>
-                <input type="radio" name="stairs_all" value="100" id="stairs_all">
-                <label id="ans-three" for="stairs_all" class="btn-whatever">Peu importe</label>
+              <div class="form-container">
+                <!-- new version -->
+                <div class="marches">
+                  <input type="radio" name="stairs" value="30" id="stairs_30">
+                  <label id="ans-three" for="stairs_30" class="btn-square-small">30</label>
+                  <input type="radio" name="stairs" value="50" id="stairs_50">
+                  <label id="ans-three" for="stairs_50" class="btn-square-medium">50</label>
+                  <input type="radio" name="stairs" value="70" id="stairs_70">
+                  <label id="ans-three" for="stairs_70" class="btn-square-large">70</label>
+                </div>
+                <div class="btn-div">
+                  <input type="radio" name="stairs_all" value="100" id="stairs_all">
+                  <label id="ans-three" for="stairs_all" class="btn-whatever">Peu importe</label>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Demande nombre de correspondances -->
-          <div class="search-form-item four" id="ans-top-four">
+          <div class="search-form-item four screen-four" id="correspondances">
             <!-- selector image and legend -->
-            <div class="search-margin">
-              <%= image_tag('connection.png') %>
-              <h2>CORRESPONDANCES</h2>
-              <h3>Nombre de correspondances?</h3>
-            </div>
-            <div class="form-container">
-              <!-- new version -->
-              <div class="marches">
-                <input type="radio" name="connection" value="0" id="connection_0">
-                <label id="ans-four" for="connection_0" class="btn-square-small">0</label>
-                <input type="radio" name="connection" value="1" id="connection_1">
-                <label id="ans-four" for="connection_1" class="btn-square-medium">1</label>
-                <input type="radio" name="connection" value="2" id="connection_2">
-                <label id="ans-four" for="connection_2" class="btn-square-large">2</label>
+            <div class="content-wrapper">
+              <div class="search-margin">
+                <%= image_tag('connection.png') %>
+                <h2>CORRESPONDANCES</h2>
+                <h3>Nombre de correspondances?</h3>
               </div>
-              <input type="radio" name="connection_all" value="2" id="connection_all">
-              <label id="ans-four" for="connection_all" class="btn-whatever">Peu importe</label>
+              <div class="form-container">
+                <!-- new version -->
+                <div class="marches">
+                  <input type="radio" name="connection" value="0" id="connection_0">
+                  <label id="ans-four" for="connection_0" class="btn-square-small">0</label>
+                  <input type="radio" name="connection" value="1" id="connection_1">
+                  <label id="ans-four" for="connection_1" class="btn-square-medium">1</label>
+                  <input type="radio" name="connection" value="2" id="connection_2">
+                  <label id="ans-four" for="connection_2" class="btn-square-large">2</label>
+                </div>
+                <div class="btn-div">
+                  <input type="radio" name="connection_all" value="2" id="connection_all">
+                  <label id="ans-four" for="connection_all" class="btn-whatever">Peu importe</label>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Demande escalators oui/non -->
 
-          <div class="search-form-item five" id="ans-top-five">
+          <div class="search-form-item five screen-five" id="escalators">
             <!-- selector image and legend -->
-            <div class="search-margin">
-              <%= image_tag('escalator_no_circle.png') %>
-              <h2>ESCALATORS</h2>
-              <h3>Besoin d'escaliers mécaniques?</h3>
-            </div>
-            <div class="form-container">
-              <!-- Demande escalators oui/non avec images -->
-              <input type="radio" name="escalator" value="true" id="escalator_true">
-              <label for="escalator_true" class="picto-item">
-                <%= image_tag('checked.png') %>
-              </label>
-              <input type="radio" name="escalator" value="false" id="escalator_false">
-              <label for="escalator_false" class="picto-item">
-                <%= image_tag('cancel.png') %>
-              </label>
-              <!-- Submit button -->
+            <div class="content-wrapper">
+              <div class="search-margin">
+                <%= image_tag('escalator_no_circle.png') %>
+                <h2>ESCALATORS</h2>
+                <h3>Besoin d'escaliers mécaniques?</h3>
+              </div>
               <div class="form-container">
-                <%= f.submit 'Partez!', class: 'btn-results btn-block' %>
+                <!-- Demande escalators oui/non avec images -->
+                <input type="radio" name="escalator" value="true" id="escalator_true">
+                <label for="escalator_true" class="picto-item">
+                  <%= image_tag('checked.png') %>
+                </label>
+                <input type="radio" name="escalator" value="false" id="escalator_false">
+                <label for="escalator_false" class="picto-item">
+                  <%= image_tag('cancel.png') %>
+                </label>
+                <!-- Submit button -->
+                <div class="form-container">
+                  <%= f.submit 'Partez!', class: 'btn-results btn-block' %>
+                </div>
               </div>
             </div>
           </div>
