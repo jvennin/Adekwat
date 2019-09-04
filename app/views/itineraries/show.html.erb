@@ -31,6 +31,15 @@
               <p>dans <span><%= route.next_departure_time %></span> min à <%= route.departure_station %></p>
             </div>
 
+            <% if route.arrival_poi(current_user) %>
+              <div class="travel_selector">
+                <% if route.arrival_poi(current_user).escalator == true %>
+                 <%= image_tag('escalator_no_circle.png', height: '32', width: '32') %>
+                <% end %>
+                <p>Nombre de marches <span><%= route.arrival_poi(current_user).stairs_number %></span>
+              </div>
+            <% end %>
+
           </div>
          <div>
            Station d'arrivée: <%= route.arrival_station %>
