@@ -5,33 +5,34 @@
 
 
 .btn-whatever {
-  color: black;
-  padding: 8px 8px;
-  background: white;
+  color: white;
+  padding: 12px 8px;
+  background: #fe144c;
   transition: background 0.3s ease;
   font-size: 17px;
-  font-family: inherit;
+  font-family: $body-font;
   line-height: 17px;
   justify-content: center;
-  height: 36px;
-  width: 140px;
-  border: 2px solid black;
+  height: 45px;
+  width: 60vw !important;
+  border: 2px solid #fe144c;
+  border-radius: 50px;
   cursor: pointer;
 }
 
 
 .btn-results {
-  color: black;
+  color: white;
   min-height: 44px;
   padding: 8px 8px;
-  border-radius: 4px;
-  background: white;
+  border-radius: 50px;
+  background: #fe144c;
   transition: background 0.3s ease;
   font-size: 17px;
-  font-family: inherit;
+  font-family: $body-font;
   //line-height: 17px;
   justify-content: center;
-  border: 2px solid black;
+  border: 2px solid #fe144c;
   cursor: pointer;
 }
 
@@ -44,9 +45,10 @@
   color: white;
   font-family: "Lexend Deca", "Raleway", "Helvetica", "sans-serif";
   font-size: 22px;
-  background: #2166DD;
+  // background: #2166DD;
+  background-image: linear-gradient(to right bottom, #56ccf2, #25bbf5, #00a9f6, #0096f4, #2f80ed);
   box-shadow: 5px 5px 20px rgba(0,0,0,0.25);
-  border-radius: 2px;
+  border-radius: 10px;
   padding: 12px 20px;
   width: 50px !important;
   height: 50px !important;
@@ -61,9 +63,10 @@
   color: white;
   font-family: "Lexend Deca", "Raleway", "Helvetica", "sans-serif";
   font-size: 28px;
-  background: #1DA8B0;
+  // background: #1DA8B0;
+  background-image: linear-gradient(to right bottom, #00b09b, #24b98b, #4bc075, #70c65b, #96c93d);
   box-shadow: 5px 5px 20px rgba(0,0,0,0.25);
-  border-radius: 2px;
+  border-radius: 10px;
   padding: 12px 20px;
   width: 75px !important;
   height: 75px !important;
@@ -78,9 +81,10 @@
   color: white;
   font-family: "Lexend Deca", "Raleway", "Helvetica", "sans-serif";
   font-size: 32px;
-  background: #811DB0;
+  // background: #811DB0;
+  background-image: linear-gradient(to right bottom, #9a5adb, #c752c2, #e253a7, #f05d8f, #f46e7b);
   box-shadow: 5px 5px 20px rgba(0,0,0,0.25);
-  border-radius: 2px;
+  border-radius: 10px;
   padding: 12px 20px;
   width: 100px !important;
   height: 100px !important;
