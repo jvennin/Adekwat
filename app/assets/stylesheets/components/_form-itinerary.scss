@@ -82,6 +82,7 @@ label img {
   justify-content: center;
 }
 
+
 .picto-item {
   border-radius: 50% !important;
   cursor: pointer;
@@ -92,6 +93,13 @@ label img {
 
 .form-container input[type=radio]:checked+label {
   border: 5px solid $header;
+}
+
+.btn-div input[type=radio]:checked+label {
+  border: 5px solid $header;
+  background: white;
+  color: $header;
+  font-weight: 700;
 }
 
 
