@@ -17,45 +17,65 @@
                   <% else %>
                     <span class="number <%= step.is_rer %> <%= index + 1 %>" style="background-color:<%= step.line_color %>; color:<%= step.line_color_text %>;"><%= step.line_short_name %></span>
                   <% end %>
+
                 <% end %>
+                   <% if route.arrival_poi(current_user) %>
+                      <div class="travel-selector">
+                        <% if route.arrival_poi(current_user).escalator == true %>
+                          <%= image_tag('escalator_no_circle.png', height: '20', width: '20') %>
+                         <% end %>
+                <!-- <p>Nombre de marches <span><%= route.arrival_poi(current_user).stairs_number %></span></p> -->
+                      </div>
+                   <% end %>
               <% end %>
 
             </div>
 
 
             <div class="time">
-              <p><span><%= (route.duration * current_user.profile.coef_multiplicateur_duration).to_i%> mins</span>
+              <p><span><%= (route.duration * current_user.profile.coef_multiplicateur_duration).to_i%> mins</span></p>
             </div>
 
             <div class="waiting">
               <p>dans <span><%= route.next_departure_time %></span> min à <%= route.departure_station %></p>
             </div>
 
-            <% if route.arrival_poi(current_user) %>
-              <div class="travel_selector">
+           <!--  <% if route.arrival_poi(current_user) %>
+              <div class="travel-selector">
                 <% if route.arrival_poi(current_user).escalator == true %>
-                 <%= image_tag('escalator_no_circle.png', height: '32', width: '32') %>
+                 <%= image_tag('escalator_no_circle.png', height: '20', width: '20') %>
                 <% end %>
-                <p>Nombre de marches <span><%= route.arrival_poi(current_user).stairs_number %></span>
+                <p>Nombre de marches <span><%= route.arrival_poi(current_user).stairs_number %></span></p>
               </div>
-            <% end %>
+            <% end %> -->
 
+            <div class="more-info">
+              <p data-toggle="collapse" data-target="#collapseExample-<%= index + 1 %>" aria-expanded="false" aria-controls="collapseExample">Plus d'infos</p>
+            </div>
+
+
+            <div class="collapse" id="collapseExample-<%= index + 1 %>">
+              <div class="details-info card-body">
+                <div>
+                  Station d'arrivée: <%= route.arrival_station %>
+                </div>
+
+                <% if route.arrival_poi(current_user) %>
+                  <div>
+                    À <%= route.arrival_station %>, prendre la sortie n#<%= route.arrival_poi(current_user).number %>
+                  </div>
+                <% else %>
+                  <div>
+                    Pas d'information disponible pour cette station (ascenseur, escalator...)
+                  </div>
+                <% end %>
+                <%#= link_to "Participez !", poi_survey_form_path(params[:id]) %>
+              </div>
+            </div>
           </div>
-         <div>
-           Station d'arrivée: <%= route.arrival_station %>
-         </div>
-
-          <% if route.arrival_poi(current_user) %>
-            <div>
-              À <%= route.arrival_station %>, prendre la sortie n#<%= route.arrival_poi(current_user).number %>
-            </div>
-          <% else %>
-            <div>
-              Pas d'information disponible pour cette station (ascenseur, escalator...)
-            </div>
-          <% end %>
         </div>
       <% end %>
+
     </div>
   </div>
 </div>

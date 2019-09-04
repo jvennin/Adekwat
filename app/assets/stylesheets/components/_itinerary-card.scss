@@ -7,8 +7,9 @@
     position: relative;
     display: flex;
     //box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    overflow: hidden;
-    height: 70px;
+    flex-direction: column;
+    //overflow: hidden;
+    min-height: 70px;
     padding: 3px;
     background: white;
     border:1px solid #e0dede;
@@ -58,11 +59,24 @@
 
     .waiting {
       position: absolute;
-      bottom: 10px;
-      left: 253px;
+      top: 35px;
+      left: 10px;
       p{
         margin: 0;
+        font-size: 13px;
       }
+    }
+    .more-info {
+      position: absolute;
+      top: 35px;
+      right: 10px;
+      p{
+        margin: 0;
+        font-size: 13px;
+      }
+    }
+    .details-info {
+      margin-top: 60px;
     }
   }
 }
