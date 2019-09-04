@@ -1,6 +1,7 @@
 class SurveysController < ApplicationController
   skip_after_action :verify_authorized
 
+
   def answer
     if params[:poi] == "true"
       poi = Poi.find(params[:poi_id])
@@ -18,4 +19,5 @@ class SurveysController < ApplicationController
   def form
     @poi = Poi.find(params[:poi_id])
   end
+
 end

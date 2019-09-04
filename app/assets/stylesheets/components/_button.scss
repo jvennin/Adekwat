@@ -101,10 +101,27 @@
 
 }
 
-#buttonBar{
+#buttonBar {
   width:320px;
+}
+
+.btn-survey {
+  display: block;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $header;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  text-align: center;
 }
 
 
 
+
+
+.btn-survey:hover {
+  color: white;
+  text-decoration: none;
+}
 
