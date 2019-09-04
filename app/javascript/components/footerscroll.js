@@ -41,9 +41,7 @@ const footerscroll = () => {
   // });
 
   jQuery(document).ready(function() {
-    console.log('is ready');
     jQuery('.js-scrollTo').on('click', function() { // Au clic sur un élément
-      console.log("js-scroll")
       var page = jQuery(this).attr('href'); // Page cible
       var speed = 750; // Durée de l'animation (en ms)
       jQuery('html, body').animate( { scrollTop: jQuery(page).offset().top }, speed ); // Go
