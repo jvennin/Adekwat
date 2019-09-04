@@ -1,12 +1,23 @@
+<div class="container-fluid push-content">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-4 offset-lg-4 offset-xl-4 no-padding">
+      <div class="profile-info-wrapper">
 
-<h1 class="profile">Bonjour !</h1>
-  <div class="profile-img">
-  <%= image_tag "user.png" , class: "card-img-top" %>
-  </div>
-    <h2>Status<%= @profile.status %></h2>
-     <h2><%= @profile.score %></h2>
-      <h3>Vous avez cumulé .. points! </h3>
-        <div class="card-product mb-3">
+        <div class="intro-container mt-5 mb-3">
+
+
+            <div class="intro-details">
+              <div class="profile-img">
+                <%= image_tag "trophy.png" , class: "card-img-top" %>
+              </div>
+              <h2>Baby hero<%= @profile.status %></h2>
+              <p class="points">Vous avez cumulé</p>
+              <p class="score">234<%= @profile.score %> <span class="units">points</span></p>
+            </div>
+
+
+        </div>
+        <div class="preference-container mb-3">
           <div class="card-product-details">
             <div class="card-product-infos">
               <div class="details">
@@ -29,9 +40,12 @@
         </div>
 
         <div class="buttons">
-          <label class="btn-results" id="ans-one">Modifier mon profil</label>
-          <label class="btn-results" id="ans-one">
-          <%= link_to 'Quitter', root_path, method: :get %></label>
+          <%= link_to 'Retour', root_path, class: "btn-results btn-block", id: "ans-one", method: :get  %>
         </div>
 
+      </div><!-- end container -->
+
+    </div>
+  </div>
+</div>
 
