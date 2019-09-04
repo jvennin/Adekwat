@@ -1,0 +1,5 @@
+meta_product_name: "ADEKWAT"
+meta_title: "ADEKWAT - Chacun sa route !"
+meta_description: "ADEKWAT est une application générant des trajets en transport en commun optimisés en fonction des capacités motrices de l'utilisateur."
+meta_image: "adekwat-cover.png" # should exist in `app/assets/images/`
+

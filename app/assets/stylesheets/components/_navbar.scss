@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #FE144C;
+  background: transparent;
   height: 70px;
   // a delete
   // opacity: 0.2;
@@ -17,7 +17,7 @@
   flex-grow: 0;
 
   .nav-link {
-    color: #FFF;
+    color: $header;
   }
 }
 
@@ -54,7 +54,7 @@
     .navbar-toggler{
       border:none!important;
       .fa-bars {
-        color: #FFFFFF!important;
+        color: $header !important;
       }
     }
   }
