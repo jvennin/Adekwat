@@ -1,7 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #FE144C;
-  height: 150px;
+  height: 70px;
 
 }
 .navbar-toggler {
@@ -23,12 +23,29 @@
   .navbar-brand {
     img {
       width: 140px;
+
     }
     p {
       margin: 0;
     }
   }
 }
+
+@media (max-width: 375px) {
+
+  .navbar-lewagon {
+    .navbar-brand {
+      img {
+        width: 100px;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+}
+
 @media (max-width: 992px) {
 
   .navbar-light {
@@ -42,7 +59,7 @@
 
   .navbar-collapse {
       position: absolute;
-      top: 150px;
+      top: 70px;
       right: 100%;
       padding-left: 15px;
       padding-right: 15px;

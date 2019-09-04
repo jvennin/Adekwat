@@ -16,10 +16,6 @@ initMapbox();
 dynamicMap(initMapbox);
 
 
-initAutocomplete();
-initMapbox();
-
-
 if (document.getElementById('ans-one')) {
   autoscroll();
 };
