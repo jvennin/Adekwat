@@ -42,9 +42,14 @@
   display: none;
 }
 
+.survey-container input[type=radio]:checked+label {
+  border: 5px solid $header;
+}
+
 .survey-margin {
   margin-top: 50px;
   justify-content: center;
   text-align: center;
   padding: 0 5px;
 }
+
