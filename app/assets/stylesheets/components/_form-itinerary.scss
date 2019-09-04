@@ -93,6 +93,12 @@ label img {
   border: 5px solid $optional;
 }
 
+// scrollIntoView for iPhone bug
+
+
+// * {
+ //-webkit-overflow-scrolling: touch;
+//}
 
 
 

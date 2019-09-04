@@ -11,19 +11,19 @@ import { initAutocomplete } from "../plugins/init_autocomplete";
 import { initMapbox } from '../plugins/init_mapbox';
 import { dynamicMap } from '../plugins/dynamic_map';
 
-initAutocomplete();
-initMapbox();
-dynamicMap(initMapbox);
+// initAutocomplete();
+// initMapbox();
+// dynamicMap(initMapbox);
 
 
-initAutocomplete();
-initMapbox();
+// initAutocomplete();
+// initMapbox();
 
 
 if (document.getElementById('ans-one')) {
   autoscroll();
 };
 
-if (document.getElementById('foot-one')) {
-  footerscroll();
-};
+// if (document.getElementById('foot-one')) {
+//   footerscroll();
+// };
