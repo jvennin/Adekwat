@@ -84,8 +84,19 @@ label img {
 
 .marches {
   display: flex;
+  //align-items: flex-end;
+  //justify-content: center;
+  flex-direction: column;
+}
+
+.options {
+  display: flex;
   align-items: flex-end;
   justify-content: center;
+}
+
+.btn-div {
+  display: block;
 }
 
 
