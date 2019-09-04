@@ -2,10 +2,39 @@
   padding-left: 0;
   padding-right: 0;
   &.push-content {
-    padding-top: 75px;
+    //padding-top: 75px;
     //overflow: scroll;
     margin-bottom: 100px;
   }
+
+  .screen-one, .scree-two, .screen-three, .screen-four, .screen-five  {
+    height: 100vh;
+    .content-wrapper {
+      width: 90%;
+    }
+  }
+
+
+  .screen-one {
+    // background-color: blue;
+  }
+
+  .screen-two {
+    // background-color: white;
+  }
+
+  .screen-three {
+    // background-color: red;
+  }
+
+  .screen-four {
+    // background-color: black;
+  }
+
+  .screen-five {
+    // background-color: yellow;
+  }
+
 }
 
 .col-12 {
