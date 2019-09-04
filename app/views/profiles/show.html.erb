@@ -1,21 +1,29 @@
 
 <h1 class="profile">Bonjour !</h1>
-<hr>
   <div class="profile-img">
   <%= image_tag "user.png" , class: "card-img-top" %>
   </div>
-    <h2><%= @profile.score %></h2>
     <h2>Status<%= @profile.status %></h2>
+     <h2><%= @profile.score %></h2>
       <h3>Vous avez répondu à 25 questionnaires et cumulé 247 points! </h3>
         <div class="card-product mb-3">
           <div class="card-product-details">
             <div class="card-product-infos">
-              <div class="details">Mes préférences
-                <h2>Temps de marche : <%= @profile.walking_duration %> min</h2>
-                <h2>Nombre de marches : <%= @profile.stairs %></h2>
-                <h2>Nombre de correspondances : <%= @profile.connection %></h2>
-                <h2>Présence d'escaliers mécaniques : <%= @profile.escalator %></h2>
+              <div class="details">
+                <h2>Mes préférences</h2>
               </div>
+                  <div class="walking_duration space">
+                    <%= image_tag "walking_duration.png" , class: "card-img-pref" %> Temps de marche : <%= @profile.walking_duration %> min
+                  </div>
+                  <div class="stairs space">
+                    <%= image_tag "ladder.png" , class: "card-img-pref" %> Nombre de marches : <%= @profile.stairs %>
+                  </div>
+                  <div class="connection space">
+                    <%= image_tag "connection.png" , class: "card-img-pref" %> Nombre de correspondances : <%= @profile.connection %>
+                  </div>
+                  <div class="escalator space">
+                    <%= image_tag "escalator_no_circle.png" , class: "card-img-pref" %>  Escaliers mécaniques : <%= yesno(@profile.escalator) %>
+                  </div>
             </div>
           </div>
         </div>
