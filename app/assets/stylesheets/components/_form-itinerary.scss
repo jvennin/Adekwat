@@ -52,6 +52,8 @@ label img {
         min-height: 50px;
         border-radius: 5px;
         padding-right: 40px;
+        border-radius: 10px;
+        border-color:#fe144c;
       }
 
       label, small {
@@ -92,6 +94,10 @@ label img {
 
 .form-container input[type=radio]:checked+label {
   border: 5px solid $header;
+}
+
+.ap-input-icon svg {
+  fill: #fe144c;
 }
 
 
