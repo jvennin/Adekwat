@@ -69,7 +69,9 @@
                     Pas d'information disponible pour cette station (ascenseur, escalator...)
                   </div>
                 <% end %>
-                <%#= link_to "Participez !", poi_survey_form_path(params[:id]) %>
+                <% if route.arrival_poi(current_user) %>
+                  <%= link_to "Participez !", poi_survey_form_path(route.arrival_poi(current_user)), class: 'btn-survey mt-4'  %>
+                <% end %>
               </div>
             </div>
           </div>
