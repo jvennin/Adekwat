@@ -30,7 +30,11 @@
     <meta name="twitter:image:src" content="<%= meta_image %>">
   </head>
   <body>
-    <%= render 'shared/navbar' %>
+    <% if action_name == "home" %>
+     <%= render 'shared/navbar_home' %>
+    <% else %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= render 'shared/footer' if params[:action] == "home" %>
