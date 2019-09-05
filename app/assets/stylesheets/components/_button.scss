@@ -23,6 +23,11 @@
   text-align: center;
 }
 
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .btn-square-small {
   background-image: linear-gradient(to right bottom, #56ccf2, #25bbf5, #00a9f6, #0096f4, #2f80ed);
 }
