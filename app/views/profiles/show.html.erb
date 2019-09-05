@@ -36,15 +36,15 @@
                     <br>
                     <p>Nombre de marches : <%= @profile.stairs %></p>
                   </div>
-                  <div class="connection space">
-                    <%= image_tag "business-affiliate-network3.png" , class: "card-img-pref" %>
-                    <br>
-                    <p>Nombre de correspondances : <%= @profile.connection %></p>
-                  </div>
                   <div class="escalator space">
                     <%= image_tag "upwards-escalator3.png" , class: "card-img-pref" %>
                     <br>
                     <p>Escaliers mécaniques : <%= yesno(@profile.escalator) %></p>
+                  </div>
+                  <div class="connection space">
+                    <%= image_tag "business-affiliate-network3.png" , class: "card-img-pref" %>
+                    <br>
+                    <p>Nombre de correspondances : <%= @profile.connection %></p>
                   </div>
             </div>
           </div>
