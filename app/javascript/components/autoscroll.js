@@ -8,7 +8,7 @@ const autoscroll = () => {
       document.querySelector('#foot-four img').src = '/assets/upwards-escalator1.png';
       document.querySelector('#foot-five img').src = '/assets/business-affiliate-network1.png';
       document.querySelector('.two').scrollIntoView({ block: 'start', behavior: 'smooth' });
-      document.querySelector('#foot-two img').src = '/assets/person-walking3.png';
+      document.querySelector('#foot-two img').src = '/assets/images/person-walking3.png';
     })
   });
   //walk
@@ -21,7 +21,7 @@ const autoscroll = () => {
       document.querySelector('#foot-five img').src = '/assets/business-affiliate-network1.png';
       document.querySelector('.three').scrollIntoView({ block: 'start', behavior: 'smooth' });
 
-      document.querySelector('#foot-three img').src = '/assets/ascending-stairs-signal2.png';
+      document.querySelector('#foot-three img').src = '/assets/images/ascending-stairs-signal2.png';
     })
   });
   //stairs
@@ -34,7 +34,7 @@ const autoscroll = () => {
       document.querySelector('#foot-three img').src = '/assets/ascending-stairs-signal.png';
       document.querySelector('#foot-five img').src = '/assets/business-affiliate-network1.png';
       document.querySelector('.four').scrollIntoView({ block: 'start', behavior: 'smooth' });      document.querySelector('#foot-four img').src = '/assets/upwards-escalator2.png';
-      document.querySelector('#foot-four img').src = '/assets/upwards-escalator3.png';
+      document.querySelector('#foot-four img').src = '/assets/images/upwards-escalator3.png';
 
     })
   });
@@ -47,7 +47,7 @@ const autoscroll = () => {
       document.querySelector('#foot-three img').src = '/assets/ascending-stairs-signal.png';
       document.querySelector('#foot-four img').src = '/assets/upwards-escalator1.png';
       document.querySelector('.five').scrollIntoView({ block: 'start', behavior: 'smooth' });
-      document.querySelector('#foot-five img').src = '/assets/business-affiliate-network3.png';
+      document.querySelector('#foot-five img').src = '/assets/images/business-affiliate-network3.png';
     })
   });
 
