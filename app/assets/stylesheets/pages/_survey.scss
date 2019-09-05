@@ -40,7 +40,7 @@
   display: none;
 }
 
-.survey-container input[type=radio]:checked+label {
+.survey-container input[type='radio']:checked+label {
   border: 5px solid $header;
 }
 

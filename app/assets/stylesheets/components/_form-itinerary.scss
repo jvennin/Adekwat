@@ -119,7 +119,7 @@ h3,.h3 {
 
 // selected options
 
-.form-container input[type=radio]:checked+label {
+.form-container input[type='radio']:checked+label {
   border: 5px solid #7acec2;
 }
 
@@ -128,7 +128,7 @@ h3,.h3 {
   fill: #fe144c;
 }
 
-.btn-div input[type=radio]:checked+label {
+.btn-div input[type='radio']:checked+label {
   border: 5px solid $header;
   background: white;
   color: $header;
