@@ -3,25 +3,24 @@
   font-size: 1.5em;
 }
 
-
-
-
 .btn-results {
   color: white;
   min-height: 44px;
   padding: 12px 60px;
   border-radius: 50px;
-  background: #fe144c;
+  //background: #fe144c;
+  background-image: linear-gradient(to right bottom, #fe144c, #f11348, #e41244, #d81140, #cb103c);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
   transition: background 0.3s ease;
   font-size: 17px;
+  font-weight: 600;
   font-family: $body-font;
   //line-height: 17px;
   justify-content: center;
-  border: 2px solid #fe144c;
+  //border: 2px solid #fe144c;
   cursor: pointer;
   text-align: center;
 }
-
 
 .btn-square-small {
   background-image: linear-gradient(to right bottom, #56ccf2, #25bbf5, #00a9f6, #0096f4, #2f80ed);
@@ -36,8 +35,8 @@
 }
 
 .btn-whatever {
-  background: #fe144c;
-  // background: linear-gradient(to right bottom, #504f50, #696769, #7d7c7d, #868384, #a9a9a9);
+  //background-image: linear-gradient(to right bottom, #4e4e4e, #6a6a6a, #878787, #a5a5a5, #c4c4c4);
+  background-image: linear-gradient(to right bottom, #363636, #444444, #535353, #626262, #717171);
 }
 
 .btn-square-survey {
@@ -52,6 +51,7 @@
   color: white;
   font-family: "Lexend Deca", "Raleway", "Helvetica", "sans-serif";
   font-size: 22px;
+  font-weight: 700;
   padding: 12px 20px;
   cursor: pointer;
 }
@@ -93,11 +93,6 @@ label[for="poi_true"] {
   background: #30b35b !important;
 }
 
-
-poi_true
-
-
-
 .btn-progress {
 
 }
@@ -111,15 +106,11 @@ poi_true
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: $header;
+  background-image: linear-gradient(to right bottom, #fe144c, #f11348, #e41244, #d81140, #cb103c);
   transition: background 0.3s ease;
   text-decoration: none;
   text-align: center;
 }
-
-
-
-
 
 .btn-survey:hover {
   color: white;
