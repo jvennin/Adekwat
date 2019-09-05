@@ -7,9 +7,9 @@
       </div>
       <h1 class="title-sz-3 mt-3">Meilleurs trajets</h1>
       <% @itinerary.routes.each_with_index do |route, index| %>
-        <div class="results-itineraries-container mt-4" data-markers="<%= @itinerary.markers[index].to_json %>" data-lines="<%= @itinerary.lines[index].to_json %>" data-color="<%= @itinerary.colors[index] %>">
+        <div class="results-itineraries-container mt-4">
           <div class="itinerary-card itinerary-border-<%= index %>">
-            <div class="subway-line">
+            <div class="subway-line" data-markers="<%= @itinerary.markers[index].to_json %>" data-lines="<%= @itinerary.lines[index].to_json %>" data-color="<%= @itinerary.colors[index] %>">
               <% route.legs.each do |leg| %>
                 <% leg.steps.each_with_index do |step, index| %>
                   <% if step.is_walking? %>
