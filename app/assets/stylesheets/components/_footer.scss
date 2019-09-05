@@ -16,8 +16,11 @@
   position: absolute;
   // top: 2px;
   // left: 0px;
-
-
+}
+.icon {
+  .fa-crosshairs{
+    color: #fe144c;
+  }
 }
 
 .icon i {
@@ -40,5 +43,10 @@
   color: #FFFFFF;
   justify-content: space-between;
   //opacity: 0.1;
+}
+
+
+.active-footer {
+  background-color: red;
 }
 

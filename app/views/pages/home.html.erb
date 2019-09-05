@@ -2,15 +2,18 @@
   <div class="row row-a0">
     <!-- col-lg-4 col-xl-4 offset-lg-4 offset-xl-4 -->
     <div class="col-12 col-sm-12 col-md-4 offset-md-4 ">
+
       <div class="form-wrapper">
         <%= simple_form_for :search, url: itineraries_path, method: :post do |f| %>  <!-- send to itineraries results page -->
           <div class="search-form-item form-container one screen-one">
-            <div class="content-wrapper">
+            <%= image_tag('ADEKWAT-logo.png', width: 290) %>
+            <%#= image_tag('ADEKWAT-logo-black.png') %>
+            <div class="content-wrapper" style="margin-bottom: 100px;">
               <div class="search-location">
                 <%= f.input :start_location, input_html: {id: "start", placeholder: "Position actuelle"} %>
                 <%= f.input :end_location, input_html: {id: "end", placeholder: "Ta destination ?"} %>
               </div>
-              <label class="btn-results btn-block" id="ans-one">Définir mes préférences</label>
+              <label class="btn-results btn-block" id="ans-one">Optimiser ce trajet</label>
             </div>
           </div>
           <div class="search-form-item two screen-two" id="marche">
@@ -18,7 +21,7 @@
             <div class="content-wrapper">
               <div class="search-margin">
                 <div class="icons-circle">
-                <%= image_tag('person-walking (2).png') %>
+                <%= image_tag('person-walking2.png') %>
                 </div>
                 <h2>MARCHE</h2>
                 <h3>Temps de marche acceptable?</h3>
@@ -47,7 +50,7 @@
             <div class="content-wrapper">
               <div class="search-margin">
                 <div class="icons-circle">
-                <%= image_tag('ascending-stairs-signal (1).png') %>
+                <%= image_tag('ascending-stairs-signal1.png') %>
                 </div>
                 <h2>ESCALIERS</h2>
                 <h3>Nombre de marches acceptable ?</h3>
@@ -68,41 +71,14 @@
             </div>
           </div>
 
-          <!-- Demande nombre de correspondances -->
-          <div class="search-form-item four screen-four" id="correspondances">
-            <!-- selector image and legend -->
-            <div class="content-wrapper">
-              <div class="search-margin">
-                <div class="icons-circle">
-                <%= image_tag('business-affiliate-network (2).png') %>
-                </div>
-                <h2>CORRESPONDANCES</h2>
-                <h3>Nombre de correspondances?</h3>
-              </div>
-              <div class="form-container">
-                <!-- new version -->
-                <div class="marches">
-                  <input type="radio" name="connection" value="0" id="connection_0">
-                  <label id="ans-four" for="connection_0" class="btn-square-small btn-square-survey">0</label>
-                  <input type="radio" name="connection" value="1" id="connection_1">
-                  <label id="ans-four" for="connection_1" class="btn-square-medium btn-square-survey">1</label>
-                  <input type="radio" name="connection" value="2" id="connection_2">
-                  <label id="ans-four" for="connection_2" class="btn-square-large btn-square-survey">2</label>
-                  <input type="radio" name="connection_all" value="2" id="connection_all">
-                  <label id="ans-four" for="connection_all" class="btn-whatever btn-square-survey">Peu importe</label>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <!-- Demande escalators oui/non -->
-
-          <div class="search-form-item five screen-five" id="escalators">
+          <div class="search-form-item four screen-four" id="escalators">
             <!-- selector image and legend -->
             <div class="content-wrapper">
               <div class="search-margin">
                 <div class="icons-circle">
-                <%= image_tag('upwards-escalator (2).png') %>
+                <%= image_tag('upwards-escalator2.png') %>
                 </div>
                 <h2>ESCALATORS</h2>
                 <h3>Besoin d'escaliers mécaniques?</h3>
@@ -111,13 +87,40 @@
                 <!-- Demande escalators oui/non avec images -->
                 <div class="radio-flex">
                   <input type="radio" name="escalator" value="true" id="escalator_true">
-                  <label for="escalator_true" class="picto-item btn-square-survey">
+                  <label id="ans-four" for="escalator_true" class="picto-item btn-square-survey">
                     <%#= image_tag('checked.png') %>
                   </label>
                   <input type="radio" name="escalator" value="false" id="escalator_false">
-                  <label for="escalator_false" class="picto-item btn-square-survey">
+                  <label id="ans-four" for="escalator_false" class="picto-item btn-square-survey">
                     <%#= image_tag('cancel.png') %>
                   </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demande nombre de correspondances -->
+          <div class="search-form-item five screen-five" id="correspondances">
+            <!-- selector image and legend -->
+            <div class="content-wrapper">
+              <div class="search-margin">
+                <div class="icons-circle">
+                <%= image_tag('business-affiliate-network2.png') %>
+                </div>
+                <h2>CORRESPONDANCES</h2>
+                <h3>Nombre de correspondances?</h3>
+              </div>
+              <div class="form-container">
+                <!-- new version -->
+                <div class="marches">
+                  <input type="radio" name="connection" value="0" id="connection_0">
+                  <label id="ans-five" for="connection_0" class="btn-square-small btn-square-survey">0</label>
+                  <input type="radio" name="connection" value="1" id="connection_1">
+                  <label id="ans-ffive" for="connection_1" class="btn-square-medium btn-square-survey">1</label>
+                  <input type="radio" name="connection" value="2" id="connection_2">
+                  <label id="ans-five" for="connection_2" class="btn-square-large btn-square-survey">2</label>
+                  <input type="radio" name="connection_all" value="2" id="connection_all">
+                  <label id="ans-five" for="connection_all" class="btn-whatever btn-square-survey">Peu importe</label>
                 </div>
                 <!-- Submit button -->
                 <div class="form-container">
@@ -126,6 +129,7 @@
               </div>
             </div>
           </div>
+
         <% end %>
       </div>
     </div>
