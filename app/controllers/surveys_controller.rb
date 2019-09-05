@@ -11,9 +11,11 @@ class SurveysController < ApplicationController
     profile = current_user.profile
     score = profile.score.to_i
     score += 5
-    profile.score = score
-    profile.save
+    # profile.score = score
+    profile.update(score: score)
+    # profile.save
     redirect_to profile_path(profile)
+
   end
 
   def form
