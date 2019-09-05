@@ -32,7 +32,7 @@ new_profile = Profile.new(user_id: new_user.id, lift: true, escalator: true, wal
 new_profile.save!
 
 puts 'Creating POI...'
-new_poi = Poi.new(lat: 48.8658461, lng: 2.3721732, address: "75011 Paris", station_name: "Parmentier", number: 1, lift: false, escalator: false, stairs_number: 88)
+new_poi = Poi.new(lat: 48.8658461, lng: 2.3721732, address: "75011 Paris", station_name: "Parmentier", number: 1, lift: false, escalator: true, stairs_number: 88)
 new_poi.save!
 
 new_poi = Poi.new(lat: 48.8658461, lng: 2.3721732, address: "75011 Paris", station_name: "Madeleine", number: 1, lift: true, escalator: true, stairs_number: 50)
