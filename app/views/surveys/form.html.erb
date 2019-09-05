@@ -4,7 +4,7 @@
       <div class="card-survey">
         <div class="intro">
           <h2>Aidez-nous<br>à vous aider!</h2>
-          <%= image_tag('heart_plant.png')%>
+          <div class="icon-circle"><%= image_tag('white-heart.png') %></div>
         </div>
         <div class="survey-wrapper">
           <%= simple_form_for :answer, url: poi_survey_answer_path(@poi), method: :post do |f| %> <!-- send to profile page -->
