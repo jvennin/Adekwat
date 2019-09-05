@@ -25,16 +25,24 @@
                 <h2>Mes préférences</h2>
               </div>
                   <div class="walking_duration space">
-                    <%= image_tag "walking_duration.png" , class: "card-img-pref" %> Temps de marche (min): <%= @profile.walking_duration %>
+                    <%= image_tag "person-walking (3).png" , class: "card-img-pref" %>
+                    <br>
+                    <p>Temps de marche (min): <%= @profile.walking_duration %></p>
                   </div>
                   <div class="stairs space">
-                    <%= image_tag "ladder.png" , class: "card-img-pref" %> Nombre de marches : <%= @profile.stairs %>
+                    <%= image_tag "ascending-stairs-signal (2).png" , class: "card-img-pref" %>
+                    <br>
+                    <p>Nombre de marches : <%= @profile.stairs %></p>
                   </div>
                   <div class="connection space">
-                    <%= image_tag "connection.png" , class: "card-img-pref" %> Nombre de correspondances : <%= @profile.connection %>
+                    <%= image_tag "business-affiliate-network (3).png" , class: "card-img-pref" %>
+                    <br>
+                    <p>Nombre de correspondances : <%= @profile.connection %></p>
                   </div>
                   <div class="escalator space">
-                    <%= image_tag "escalator_no_circle.png" , class: "card-img-pref" %>  Escaliers mécaniques : <%= yesno(@profile.escalator) %>
+                    <%= image_tag "upwards-escalator (3).png" , class: "card-img-pref" %>
+                    <br>
+                    <p>Escaliers mécaniques : <%= yesno(@profile.escalator) %></p>
                   </div>
             </div>
           </div>
@@ -49,4 +57,5 @@
     </div>
   </div>
 </div>
+
 
