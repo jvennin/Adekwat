@@ -54,12 +54,14 @@ h3, .h3 {
 
   img {
     width: 40px;
+    border-radius: 50%;
   }
 
 }
 
 .space {
   margin-bottom: 10px;
+  display: -webkit-inline-box;
 }
 
 .intro-details {
