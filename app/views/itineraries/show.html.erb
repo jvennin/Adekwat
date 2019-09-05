@@ -13,7 +13,7 @@
               <% route.legs.each do |leg| %>
                 <% leg.steps.each_with_index do |step, index| %>
                   <% if step.is_walking? %>
-                    <span class="number <%= index + 1 %>"><%= image_tag('person-walking (1).png', height: '20', width: '20') %></span>
+                    <span class="number <%= index + 1 %>"><%= image_tag('person-walking1.png', height: '20', width: '20') %></span>
                   <% else %>
                     <span class="number <%= step.is_rer %> <%= index + 1 %>" style="background-color:<%= step.line_color %>; color:<%= step.line_color_text %>;"><%= step.line_short_name %></span>
                   <% end %>
@@ -22,7 +22,7 @@
                    <% if route.arrival_poi(current_user) %>
                       <div class="travel-selector">
                         <% if route.arrival_poi(current_user).escalator == true %>
-                          <%= image_tag('upwards-escalator (1).png', height: '20', width: '20') %>
+                          <%= image_tag('upwards-escalator1.png', height: '20', width: '20') %>
                          <% end %>
                       </div>
                    <% end %>
