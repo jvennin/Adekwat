@@ -1,5 +1,5 @@
 <div class="container-fluid push-content" id="itineraire">
-  <div class="row">
+  <div class="row row-a0">
     <!-- col-lg-4 col-xl-4 offset-lg-4 offset-xl-4 -->
     <div class="col-12 col-sm-12 col-md-4 offset-md-4 ">
       <div class="form-wrapper">
@@ -25,17 +25,15 @@
                 <!-- new version -->
                 <div class="marches">
                   <input type="radio" name="walking_duration" value="10" id="walking_duration_10">
-                  <label id="ans-two" for="walking_duration_10" class="btn-square-small">10</label>
+                  <label id="ans-two" for="walking_duration_10" class="btn-square-small btn-square-survey">10</label>
 
                   <input type="radio" name="walking_duration" value="15" id="walking_duration_15">
-                  <label id="ans-two" for="walking_duration_15" class="btn-square-medium">15</label>
+                  <label id="ans-two" for="walking_duration_15" class="btn-square-medium btn-square-survey">15</label>
 
                   <input type="radio" name="walking_duration" value="20" id="walking_duration_20">
-                  <label id="ans-two" for="walking_duration_20" class="btn-square-large">20</label>
-                </div>
-                <div class="btn-div">
+                  <label id="ans-two" for="walking_duration_20" class="btn-square-large btn-square-survey">20</label>
                   <input type="radio" name="walking_duration" value="30" id="walking_duration_all">
-                  <label id="ans-two" for="walking_duration_all" class="btn-whatever">Peu importe</label>
+                  <label id="ans-two" for="walking_duration_all" class="btn-whatever btn-square-survey">Peu importe</label>
                 </div>
               </div>
             </div>
@@ -54,15 +52,13 @@
                 <!-- new version -->
                 <div class="marches">
                   <input type="radio" name="stairs" value="30" id="stairs_30">
-                  <label id="ans-three" for="stairs_30" class="btn-square-small">30</label>
+                  <label id="ans-three" for="stairs_30" class="btn-square-small btn-square-survey">30</label>
                   <input type="radio" name="stairs" value="50" id="stairs_50">
-                  <label id="ans-three" for="stairs_50" class="btn-square-medium">50</label>
+                  <label id="ans-three" for="stairs_50" class="btn-square-medium btn-square-survey">50</label>
                   <input type="radio" name="stairs" value="70" id="stairs_70">
-                  <label id="ans-three" for="stairs_70" class="btn-square-large">70</label>
-                </div>
-                <div class="btn-div">
+                  <label id="ans-three" for="stairs_70" class="btn-square-large btn-square-survey">70</label>
                   <input type="radio" name="stairs_all" value="100" id="stairs_all">
-                  <label id="ans-three" for="stairs_all" class="btn-whatever">Peu importe</label>
+                  <label id="ans-three" for="stairs_all" class="btn-whatever btn-square-survey">Peu importe</label>
                 </div>
               </div>
             </div>
@@ -81,15 +77,13 @@
                 <!-- new version -->
                 <div class="marches">
                   <input type="radio" name="connection" value="0" id="connection_0">
-                  <label id="ans-four" for="connection_0" class="btn-square-small">0</label>
+                  <label id="ans-four" for="connection_0" class="btn-square-small btn-square-survey">0</label>
                   <input type="radio" name="connection" value="1" id="connection_1">
-                  <label id="ans-four" for="connection_1" class="btn-square-medium">1</label>
+                  <label id="ans-four" for="connection_1" class="btn-square-medium btn-square-survey">1</label>
                   <input type="radio" name="connection" value="2" id="connection_2">
-                  <label id="ans-four" for="connection_2" class="btn-square-large">2</label>
-                </div>
-                <div class="btn-div">
+                  <label id="ans-four" for="connection_2" class="btn-square-large btn-square-survey">2</label>
                   <input type="radio" name="connection_all" value="2" id="connection_all">
-                  <label id="ans-four" for="connection_all" class="btn-whatever">Peu importe</label>
+                  <label id="ans-four" for="connection_all" class="btn-whatever btn-square-survey">Peu importe</label>
                 </div>
               </div>
             </div>
@@ -107,14 +101,16 @@
               </div>
               <div class="form-container">
                 <!-- Demande escalators oui/non avec images -->
-                <input type="radio" name="escalator" value="true" id="escalator_true">
-                <label for="escalator_true" class="picto-item">
-                  <%= image_tag('checked.png') %>
-                </label>
-                <input type="radio" name="escalator" value="false" id="escalator_false">
-                <label for="escalator_false" class="picto-item">
-                  <%= image_tag('cancel.png') %>
-                </label>
+                <div class="radio-flex">
+                  <input type="radio" name="escalator" value="true" id="escalator_true">
+                  <label for="escalator_true" class="picto-item btn-square-survey">
+                    <%#= image_tag('checked.png') %>
+                  </label>
+                  <input type="radio" name="escalator" value="false" id="escalator_false">
+                  <label for="escalator_false" class="picto-item btn-square-survey">
+                    <%#= image_tag('cancel.png') %>
+                  </label>
+                </div>
                 <!-- Submit button -->
                 <div class="form-container">
                   <%= f.submit 'Partez!', class: 'btn-results btn-block' %>
