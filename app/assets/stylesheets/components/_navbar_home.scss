@@ -1,5 +1,6 @@
-.navbar-lewagon {
-  justify-content: space-between;
+
+.navbar-lewagon-home {
+  justify-content: flex-end;
   background: transparent;
   height: 70px;
   // a delete
@@ -13,15 +14,16 @@
     outline: none;
   }
 }
-.navbar-lewagon .navbar-collapse {
+.navbar-lewagon-home .navbar-collapse {
   flex-grow: 0;
+
 
   .nav-link {
     color: $header;
   }
 }
 
-.navbar-lewagon {
+.navbar-lewagon-home {
   .navbar-brand {
     img {
       width: 140px;
@@ -35,7 +37,7 @@
 
 @media (max-width: 375px) {
 
-  .navbar-lewagon {
+  .navbar-lewagon-home {
     .navbar-brand {
       img {
         width: 100px;
@@ -54,7 +56,7 @@
     .navbar-toggler{
       border:none!important;
       .fa-bars {
-        color: black !important;
+        color: $header !important;
       }
     }
   }

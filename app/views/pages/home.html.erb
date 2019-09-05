@@ -2,10 +2,13 @@
   <div class="row row-a0">
     <!-- col-lg-4 col-xl-4 offset-lg-4 offset-xl-4 -->
     <div class="col-12 col-sm-12 col-md-4 offset-md-4 ">
+
       <div class="form-wrapper">
         <%= simple_form_for :search, url: itineraries_path, method: :post do |f| %>  <!-- send to itineraries results page -->
           <div class="search-form-item form-container one screen-one">
-            <div class="content-wrapper">
+            <%= image_tag('ADEKWAT-logo.png', width: 290) %>
+            <%#= image_tag('ADEKWAT-logo-black.png') %>
+            <div class="content-wrapper" style="margin-bottom: 100px;">
               <div class="search-location">
                 <%= f.input :start_location, input_html: {id: "start", placeholder: "Position actuelle"} %>
                 <%= f.input :end_location, input_html: {id: "end", placeholder: "Ta destination ?"} %>
