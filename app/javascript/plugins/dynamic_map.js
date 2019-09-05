@@ -1,5 +1,5 @@
 const dynamicMap = (initMapbox) => {
-  const routes = document.querySelectorAll('.results-itineraries-container');
+  const routes = document.querySelectorAll('.subway-line');
   routes.forEach((route) => {
     route.addEventListener('click', (event) => {
       const markers = event.currentTarget.dataset.markers

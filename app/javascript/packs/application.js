@@ -11,6 +11,8 @@ import { initAutocomplete } from "../plugins/init_autocomplete";
 import { initMapbox } from '../plugins/init_mapbox';
 import { dynamicMap } from '../plugins/dynamic_map';
 
+import { toggleIcon } from '../components/toggleicon';
+
 initAutocomplete();
 initMapbox();
 dynamicMap(initMapbox);
@@ -22,4 +24,8 @@ if (document.getElementById('ans-one')) {
 
 if (document.getElementById('foot-one')) {
   footerscroll();
+};
+
+if (document.getElementsByClassName('more-info')) {
+  toggleIcon();
 };

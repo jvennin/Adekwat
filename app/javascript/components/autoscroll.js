@@ -31,4 +31,4 @@ const autoscroll = () => {
 };
 
 
-export { autoscroll }
+export { autoscroll };
