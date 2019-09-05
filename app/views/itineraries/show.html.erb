@@ -1,5 +1,5 @@
 <div class="container-fluid push-content">
-  <div class="row row-a0">
+  <div class="row">
     <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-4 offset-lg-4 offset-xl-4 no-padding">
       <div class="map-box-container">
         <div id="map" style="width: 100%; height: 300px;" data-markers="<%= @itinerary.markers.first.to_json %>" data-lines="<%= @itinerary.lines.first.to_json %>" data-color="<%= @itinerary.colors.first %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -40,35 +40,34 @@
               <p>dans <span><%= route.next_departure_time %></span> min à <%= route.departure_station %></p>
             </div>
 
-           <!--  <% if route.arrival_poi(current_user) %>
+           <!--  <#% if route.arrival_poi(current_user) %>
               <div class="travel-selector">
-                <% if route.arrival_poi(current_user).escalator == true %>
+                <#% if route.arrival_poi(current_user).escalator == true %>
                  <%= image_tag('escalator_no_circle.png', height: '20', width: '20') %>
-                <% end %>
-                <p>Nombre de marches <span><%= route.arrival_poi(current_user).stairs_number %></span></p>
+                <%# end %>
+                <p>Nombre de marches <span><%#= route.arrival_poi(current_user).stairs_number %></span></p>
               </div>
-            <% end %> -->
+            <%# end %> -->
 
             <div class="more-info">
-              <p data-toggle="collapse" data-target="#collapseExample-<%= index + 1 %>" aria-expanded="false" aria-controls="collapseExample">Plus d'infos</p>
+              <p data-toggle="collapse" data-target="#collapseExample-<%= index + 1 %>" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-chevron-down"></i></p>
             </div>
 
 
             <div class="collapse" id="collapseExample-<%= index + 1 %>">
               <div class="details-info card-body">
-                <div>
-                  Station d'arrivée: <%= route.arrival_station %>
-                </div>
-
+                <hr>
+                  <strong>Sortie la plus pratique :</strong>
                 <% if route.arrival_poi(current_user) %>
                   <div>
-                    À <%= route.arrival_station %>, prendre la sortie n#<%= route.arrival_poi(current_user).number %>
+                    À <%= route.arrival_station %>, prendre la sortie n°<%= route.arrival_poi(current_user).number %>
                   </div>
                 <% else %>
                   <div>
                     Pas d'information disponible pour cette station (ascenseur, escalator...)
                   </div>
                 <% end %>
+                <hr>
                 <% if route.arrival_poi(current_user) %>
                   <%= link_to "Participez !", poi_survey_form_path(route.arrival_poi(current_user)), class: 'btn-survey mt-4'  %>
                 <% end %>
