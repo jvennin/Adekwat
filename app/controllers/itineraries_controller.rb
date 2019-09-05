@@ -2,14 +2,22 @@ class ItinerariesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:create, :show]
 
   def create
-    @profile = Profile.new(
-      walking_duration: params[:walking_duration],
-      stairs: params[:stairs],
-      connection: params[:connection],
-      escalator: params[:escalator],
-      user: current_user
-    )
-    @profile.save
+    if current_user.profile.id.nil?
+      @profile = Profile.new(
+        walking_duration: params[:walking_duration],
+        stairs: params[:stairs],
+        connection: params[:connection],
+        escalator: params[:escalator],
+        user: current_user
+      )
+      @profile.save
+    else
+      @profile = current_user.profile
+      @profile.update(walking_duration: params[:walking_duration],
+        stairs: params[:stairs],
+        connection: params[:connection],
+        escalator: params[:escalator])
+    end
     # instancier une nouvelle instance d'itineraire
     # sauvegarder (automantiquement appeler l'api sur cette instance 'after_create')
     # redirect to show de cette instance d'itineraire
@@ -32,6 +40,8 @@ class ItinerariesController < ApplicationController
     @locations = Location.geocoded #returns Itinerary with coordinates
     authorize @itinerary
     @result = JSON.parse(@itinerary.payload)
+
+
   end
 
   def index

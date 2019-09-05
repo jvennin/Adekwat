@@ -1,3 +1,3 @@
 class Poi < ApplicationRecord
-  has_many :intinerary_pois
+  has_many :itinerary_pois
 end
