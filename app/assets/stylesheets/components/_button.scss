@@ -83,14 +83,14 @@ label[for="poi_true"]:before {
 
 label[for="escalator_false"] ,
 label[for="poi_false"] {
-  background: #fe1414 !important;
-  // background-image: linear-gradient(to right bottom, #9a5adb, #c752c2, #e253a7, #f05d8f, #f46e7b);
+  //background: #fe1414 !important;
+  background-image: linear-gradient(to right bottom, #d81111, #e11212, #eb1313, #f41313, #fe1414) !important;
 }
 
 label[for="escalator_true"] ,
 label[for="poi_true"] {
-  // background-image: linear-gradient(to right bottom, #00b09b, #24b98b, #4bc075, #70c65b, #96c93d);
-  background: #30b35b !important;
+  background-image: linear-gradient(to right bottom, #217d3f, #258a46, #28984d, #2ca554, #30b35b);
+  // background: #30b35b !important;
 }
 
 .btn-progress {
