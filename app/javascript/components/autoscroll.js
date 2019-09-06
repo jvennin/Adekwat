@@ -31,7 +31,9 @@ const autoscroll = () => {
     const iconTwo = document.querySelector('#foot-two img');
     iconTwo.src = iconTwo.dataset.iconActive;
 
-    document.querySelector('.two').scrollIntoView({ block: 'start', behavior: 'smooth' });
+    //document.querySelector('.two').scrollIntoView({ block: 'start', behavior: 'smooth' });
+
+    jQuery('html, body').animate( { scrollTop: jQuery('.two').offset().top }, 750 );
   });
 
   //walk
@@ -43,7 +45,8 @@ const autoscroll = () => {
       const imgThree = document.querySelector('#foot-three img');
       imgThree.src = imgThree.dataset.iconActive;
 
-      document.querySelector('.three').scrollIntoView({ block: 'start', behavior: 'smooth' });
+      //document.querySelector('.three').scrollIntoView({ block: 'start', behavior: 'smooth' });
+      jQuery('html, body').animate( { scrollTop: jQuery('.three').offset().top }, 750 );
     });
   });
 
@@ -56,7 +59,8 @@ const autoscroll = () => {
       const imgFour = document.querySelector('#foot-four img');
       imgFour.src = imgFour.dataset.iconActive;
 
-      document.querySelector('.four').scrollIntoView({ block: 'start', behavior: 'smooth' });
+      //document.querySelector('.four').scrollIntoView({ block: 'start', behavior: 'smooth' });
+      jQuery('html, body').animate( { scrollTop: jQuery('.four').offset().top }, 750 );
     });
   });
 
@@ -69,7 +73,8 @@ const autoscroll = () => {
       const imgFive = document.querySelector('#foot-five img');
       imgFive.src = imgFive.dataset.iconActive;
 
-      document.querySelector('.five').scrollIntoView({ block: 'start', behavior: 'smooth' });
+      //document.querySelector('.five').scrollIntoView({ block: 'start', behavior: 'smooth' });
+      jQuery('html, body').animate( { scrollTop: jQuery('.five').offset().top }, 750 );
     });
   });
 };
@@ -88,7 +93,7 @@ const footerscroll = () => {
         icon.style.color = '#fe144c';
       }
 
-      var page = jQuery(this).attr('href'); // Page cible
+      var page = jQuery(this).attr('href'); // Bloc cible
       var speed = 750; // Durée de l'animation (en ms)
       jQuery('html, body').animate( { scrollTop: jQuery(page).offset().top }, speed ); // Go
       return false;
