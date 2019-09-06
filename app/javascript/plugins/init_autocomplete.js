@@ -4,14 +4,18 @@ const initAutocomplete = () => {
   const endAddressInput = document.getElementById('end');
   if (startAddressInput) {
     places({
+      appId: 'pl2MIL8NBC2Y',
+      apiKey: '0ee58fdbb38e85b6485cd50b025baf6d',
       container: startAddressInput,
       countries: ['fr']
     });
   }
   if (endAddressInput) {
     places({
-     container: endAddressInput,
-     countries: ['fr']
+      appId: 'pl2MIL8NBC2Y',
+      apiKey: '0ee58fdbb38e85b6485cd50b025baf6d',
+      container: endAddressInput,
+      countries: ['fr']
     });
   }
 };
