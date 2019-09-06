@@ -26,19 +26,19 @@
                 <h2>MARCHE</h2>
                 <h3>Temps de marche acceptable?</h3>
               </div>
-              <div class="form-container">
+              <div id="ans-two" class="form-container">
                 <!-- new version -->
                 <div class="marches">
                   <input type="radio" name="walking_duration" value="10" id="walking_duration_10">
-                  <label id="ans-two" for="walking_duration_10" class="btn-square-small btn-square-survey">10</label>
+                  <label for="walking_duration_10" class="btn-square-small btn-square-survey">10</label>
 
                   <input type="radio" name="walking_duration" value="15" id="walking_duration_15">
-                  <label id="ans-two" for="walking_duration_15" class="btn-square-medium btn-square-survey">15</label>
+                  <label for="walking_duration_15" class="btn-square-medium btn-square-survey">15</label>
 
                   <input type="radio" name="walking_duration" value="20" id="walking_duration_20">
-                  <label id="ans-two" for="walking_duration_20" class="btn-square-large btn-square-survey">20</label>
+                  <label for="walking_duration_20" class="btn-square-large btn-square-survey">20</label>
                   <input type="radio" name="walking_duration" value="30" id="walking_duration_all">
-                  <label id="ans-two" for="walking_duration_all" class="btn-whatever btn-square-survey">Peu importe</label>
+                  <label for="walking_duration_all" class="btn-whatever btn-square-survey">Peu importe</label>
                 </div>
               </div>
             </div>
@@ -55,17 +55,17 @@
                 <h2>ESCALIERS</h2>
                 <h3>Nombre de marches acceptable ?</h3>
               </div>
-              <div class="form-container">
+              <div id="ans-three" class="form-container">
                 <!-- new version -->
                 <div class="marches">
                   <input type="radio" name="stairs" value="30" id="stairs_30">
-                  <label id="ans-three" for="stairs_30" class="btn-square-small btn-square-survey">30</label>
+                  <label for="stairs_30" class="btn-square-small btn-square-survey">30</label>
                   <input type="radio" name="stairs" value="50" id="stairs_50">
-                  <label id="ans-three" for="stairs_50" class="btn-square-medium btn-square-survey">50</label>
+                  <label for="stairs_50" class="btn-square-medium btn-square-survey">50</label>
                   <input type="radio" name="stairs" value="70" id="stairs_70">
-                  <label id="ans-three" for="stairs_70" class="btn-square-large btn-square-survey">70</label>
+                  <label for="stairs_70" class="btn-square-large btn-square-survey">70</label>
                   <input type="radio" name="stairs_all" value="100" id="stairs_all">
-                  <label id="ans-three" for="stairs_all" class="btn-whatever btn-square-survey">Peu importe</label>
+                  <label for="stairs_all" class="btn-whatever btn-square-survey">Peu importe</label>
                 </div>
               </div>
             </div>
@@ -85,13 +85,13 @@
               </div>
               <div class="form-container">
                 <!-- Demande escalators oui/non avec images -->
-                <div class="radio-flex">
+                <div id="ans-four" class="radio-flex">
                   <input type="radio" name="escalator" value="true" id="escalator_true">
-                  <label id="ans-four" for="escalator_true" class="picto-item btn-square-survey">
+                  <label for="escalator_true" class="picto-item btn-square-survey">
                     <%#= image_tag('checked.png') %>
                   </label>
                   <input type="radio" name="escalator" value="false" id="escalator_false">
-                  <label id="ans-four" for="escalator_false" class="picto-item btn-square-survey">
+                  <label for="escalator_false" class="picto-item btn-square-survey">
                     <%#= image_tag('cancel.png') %>
                   </label>
                 </div>

@@ -1,57 +1,99 @@
+const resetIconImages = () => {
+  document.querySelector('#foot-one i').style.color = '#000000';
+
+  // AFTER REFACTORING
+  const icons = document.querySelectorAll('.footer .icon img');
+
+  icons.forEach((icon) => {
+    icon.src = icon.dataset.icon;
+  });
+
+  // -- BEFORE RECACTORING
+  // const iconTwo = document.querySelector('#foot-two img');
+  // iconTwo.src = iconTwo.dataset.icon;
+
+  // const imgThree = document.querySelector('#foot-three img');
+  // imgThree.src = imgThree.dataset.icon;
+
+  // const imgFour = document.querySelector('#foot-four img');
+  // imgFour.src = imgFour.dataset.icon;
+
+  // const imgFive = document.querySelector('#foot-five img');
+  // imgFive.src = imgFive.dataset.icon;
+}
+
 const autoscroll = () => {
-  const ones = document.querySelectorAll('#ans-one');
   //search
-  ones.forEach((one) => {
-    one.addEventListener('click', () => {
-      document.querySelector('.fa-crosshairs').style.color = '#000000';
-      document.querySelector('#foot-three img').src = '/assets/ascending-stairs-signal.png';
-      document.querySelector('#foot-four img').src = '/assets/upwards-escalator1.png';
-      document.querySelector('#foot-five img').src = '/assets/business-affiliate-network1.png';
-      document.querySelector('.two').scrollIntoView({ block: 'start', behavior: 'smooth' });
-      document.querySelector('#foot-two img').src = '/assets/images/person-walking3.png';
-    })
+  const one = document.querySelector('#ans-one');
+  one.addEventListener('click', () => {
+    resetIconImages();
+
+    const iconTwo = document.querySelector('#foot-two img');
+    iconTwo.src = iconTwo.dataset.iconActive;
+
+    document.querySelector('.two').scrollIntoView({ block: 'start', behavior: 'smooth' });
   });
+
   //walk
-  const twos = document.querySelectorAll('#ans-two');
-  twos.forEach((two) => {
+  const twoLabels = document.querySelectorAll('#ans-two label');
+  twoLabels.forEach((two) => {
     two.addEventListener('click', () => {
-      document.querySelector('.fa-crosshairs').style.color = '#000000';
-      document.querySelector('#foot-two img').src = '/assets/person-walking1.png';
-      document.querySelector('#foot-four img').src = '/assets/upwards-escalator1.png';
-      document.querySelector('#foot-five img').src = '/assets/business-affiliate-network1.png';
+      resetIconImages();
+
+      const imgThree = document.querySelector('#foot-three img');
+      imgThree.src = imgThree.dataset.iconActive;
+
       document.querySelector('.three').scrollIntoView({ block: 'start', behavior: 'smooth' });
-
-      document.querySelector('#foot-three img').src = '/assets/images/ascending-stairs-signal2.png';
-    })
+    });
   });
+
   //stairs
-  const threes = document.querySelectorAll('#ans-three');
-  threes.forEach((three) => {
+  const threeLabels = document.querySelectorAll('#ans-three label');
+  threeLabels.forEach((three) => {
     three.addEventListener('click', () => {
-      // reset all images
-      document.querySelector('.fa-crosshairs').style.color = '#000000';
-      document.querySelector('#foot-two img').src = '/assets/person-walking1.png';
-      document.querySelector('#foot-three img').src = '/assets/ascending-stairs-signal.png';
-      document.querySelector('#foot-five img').src = '/assets/business-affiliate-network1.png';
-      document.querySelector('.four').scrollIntoView({ block: 'start', behavior: 'smooth' });      document.querySelector('#foot-four img').src = '/assets/upwards-escalator2.png';
-      document.querySelector('#foot-four img').src = '/assets/images/upwards-escalator3.png';
+      resetIconImages();
 
-    })
+      const imgFour = document.querySelector('#foot-four img');
+      imgFour.src = imgFour.dataset.iconActive;
+
+      document.querySelector('.four').scrollIntoView({ block: 'start', behavior: 'smooth' });
+    });
   });
+
   //escalator
-  const fours = document.querySelectorAll('#ans-four');
-  fours.forEach((four) => {
+  const fourLabels = document.querySelectorAll('#ans-four label');
+  fourLabels.forEach((four) => {
     four.addEventListener('click', () => {
-      document.querySelector('.fa-crosshairs').style.color = '#000000';
-      document.querySelector('#foot-two img').src = '/assets/person-walking1.png';
-      document.querySelector('#foot-three img').src = '/assets/ascending-stairs-signal.png';
-      document.querySelector('#foot-four img').src = '/assets/upwards-escalator1.png';
-      document.querySelector('.five').scrollIntoView({ block: 'start', behavior: 'smooth' });
-      document.querySelector('#foot-five img').src = '/assets/images/business-affiliate-network3.png';
-    })
-  });
+      resetIconImages();
 
+      const imgFive = document.querySelector('#foot-five img');
+      imgFive.src = imgFive.dataset.iconActive;
+
+      document.querySelector('.five').scrollIntoView({ block: 'start', behavior: 'smooth' });
+    });
+  });
 };
 
+const footerscroll = () => {
+  jQuery(document).ready(function() {
+    jQuery('.js-scrollTo').on('click', function(evt) { // Au clic sur l'icon du footer
+      resetIconImages();
 
-export { autoscroll };
+      let icon = evt.currentTarget.querySelector('img');
+
+      if (icon) {
+        icon.src = icon.dataset.iconActive;
+      } else {
+        icon = evt.currentTarget.querySelector('i');
+        icon.style.color = '#fe144c';
+      }
+
+      var page = jQuery(this).attr('href'); // Page cible
+      var speed = 750; // Durée de l'animation (en ms)
+      jQuery('html, body').animate( { scrollTop: jQuery(page).offset().top }, speed ); // Go
+      return false;
+    });
+  });
+};
+
+export { autoscroll, footerscroll };

@@ -5,12 +5,11 @@
           <div class="col-md-12">
             <div class="d-flex justify-content-around icons">
               <a class="icon js-scrollTo" id="foot-one" href="#itineraire"><i class="fas fa-crosshairs"></i></a>
-              <a class="icon js-scrollTo" id="foot-two" href="#marche"><%= image_tag("person-walking1.png")%></a>
-              <a class="icon js-scrollTo" id="foot-three" href="#escaliers"><%= image_tag("stairs.png")%></a>
+              <a class="icon js-scrollTo" id="foot-two" href="#marche"><%= image_tag("person-walking1.png", 'data-icon' => image_path('person-walking1.png'), 'data-icon-active' => image_path('person-walking3.png'))%></a>
+              <a class="icon js-scrollTo" id="foot-three" href="#escaliers"><%= image_tag("stairs.png", 'data-icon' => image_path('stairs.png'), 'data-icon-active' => image_path('ascending-stairs-signal2.png'))%></a>
 
-              <a class="icon js-scrollTo" id="foot-four" href="#escalators"><%= image_tag("upwards-escalator1.png")%></i></a>
-              <a class="icon js-scrollTo" id="foot-five" href="#correspondances"><%= image_tag("business-affiliate-network1.png")%></a>
-
+              <a class="icon js-scrollTo" id="foot-four" href="#escalators"><%= image_tag("upwards-escalator1.png", 'data-icon' => image_path('upwards-escalator1.png'), 'data-icon-active' => image_path('upwards-escalator3.png'))%></a>
+              <a class="icon js-scrollTo" id="foot-five" href="#correspondances"><%= image_tag("business-affiliate-network1.png", 'data-icon' => image_path('business-affiliate-network1.png'), 'data-icon-active' => image_path('business-affiliate-network3.png'))%></a>
             </div>
           </div>
         </div>
