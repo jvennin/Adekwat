@@ -74,4 +74,26 @@ const autoscroll = () => {
   });
 };
 
-export { autoscroll };
+const footerscroll = () => {
+  jQuery(document).ready(function() {
+    jQuery('.js-scrollTo').on('click', function(evt) { // Au clic sur l'icon du footer
+      resetIconImages();
+
+      let icon = evt.currentTarget.querySelector('img');
+
+      if (icon) {
+        icon.src = icon.dataset.iconActive;
+      } else {
+        icon = evt.currentTarget.querySelector('i');
+        icon.style.color = '#fe144c';
+      }
+
+      var page = jQuery(this).attr('href'); // Page cible
+      var speed = 750; // Durée de l'animation (en ms)
+      jQuery('html, body').animate( { scrollTop: jQuery(page).offset().top }, speed ); // Go
+      return false;
+    });
+  });
+};
+
+export { autoscroll, footerscroll };
