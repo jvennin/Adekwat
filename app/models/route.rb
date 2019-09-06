@@ -18,7 +18,7 @@ attr_reader :options
   end
 
   def next_departure_time
-    ((Time.parse(legs.first.next_departure_time) - Time.now) / 60).to_i
+    ((Time.zone.parse(legs.first.next_departure_time) - Time.now.in_time_zone) / 60).to_i
     # puts " - #{ legs.first.next_departure_time }"
   end
 
